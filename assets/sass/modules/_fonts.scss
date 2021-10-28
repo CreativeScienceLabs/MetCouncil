@@ -1,0 +1,70 @@
+/**********************************************
+    Fonts
+***********************************************/
+
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url('../fonts/GothamBold/GothamBold.eot');
+    src: url('../fonts/GothamBold/GothamBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamBold/GothamBold.woff') format('woff'),
+        url('../fonts/GothamBold/GothamBold.ttf') format('truetype'),
+        url('../fonts/GothamBold/GothamBold.svg#GothamBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('../fonts/GothamBook/GothamBook.eot');
+    src: url('../fonts/GothamBook/GothamBook.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamBook/GothamBook.woff') format('woff'),
+        url('../fonts/GothamBook/GothamBook.ttf') format('truetype'),
+        url('../fonts/GothamBook/GothamBook.svg#GothamBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham-Black';
+    src: url('../fonts/GothamBlack/GothamBlack.eot');
+    src: url('../fonts/GothamBlack/GothamBlack.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamBlack/GothamBlack.woff') format('woff'),
+        url('../fonts/GothamBlack/GothamBlack.ttf') format('truetype'),
+        url('../fonts/GothamBlack/GothamBlack.svg#GothamBlack') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamMedium';
+    src: url('../fonts/GothamMedium/GothamMedium.eot');
+    src: url('../fonts/GothamMedium/GothamMedium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamMedium/GothamMedium.woff') format('woff'),
+        url('../fonts/GothamMedium/GothamMedium.ttf') format('truetype'),
+        url('../fonts/GothamMedium/GothamMedium.svg#GothamMedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto-Regular/Roboto-Regular.eot');
+    src: url('../fonts/Roboto-Regular/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Regular/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto-Regular/Roboto-Regular.ttf') format('truetype'),
+        url('../fonts/Roboto-Regular/Roboto-Regular.svg#Roboto-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto-Bold/Roboto-Bold.eot');
+    src: url('../fonts/Roboto-Bold/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Bold/Roboto-Bold.woff') format('woff'),
+        url('../fonts/Roboto-Bold/Roboto-Bold.ttf') format('truetype'),
+        url('../fonts/Roboto-Bold/Roboto-Bold.svg#Roboto-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+

@@ -1,0 +1,361 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: $gotham-reg;
+  font-weight: normal;
+  font-size: $txt-size;
+  line-height: 1.77;
+  color: $color-black;
+  background: $color-white;
+  margin: 0px;
+  padding: 0px;
+  @media #{$mobile-landscape} {
+    font-size: $size-base;
+  }
+}
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  font-family: $gotham-bld;
+  color: $color-black;
+}
+h1{
+  font-size: $size-h1;
+  line-height: 1;
+}
+h2{
+  font-size: $size-h2;
+  line-height: 1.2;
+  @media #{$mobile-landscape} {
+    font-size: 40px;
+  }
+}
+h3{
+  font-size: $size-h3;
+  line-height: 1.27;
+}
+h4{
+  font-size: $size-h4;
+  line-height: 1.27;
+}
+h5{
+   font-size: $size-h5;
+   line-height: 1.33;
+}
+h6{
+  font-size: $txt-size;
+  line-height: 1.77;
+}
+p {
+  font-size: $txt-size;
+  line-height: 1.77;
+  margin: 0 0 20px;
+  @media #{$mobile-landscape} {
+    font-size: $size-base;
+  }
+}
+strong {
+  font-weight: normal;
+  font-family: $gotham-bld;
+}
+a {
+  color: $color-red;
+  text-decoration: none;
+  outline: 0px none !important;
+  @include transition (all .3s ease-in-out);
+  &:hover,
+  &:focus {
+    color: $color-yellow;
+    text-decoration: none;
+    outline: 0px none !important;
+  }
+}
+img, a img {
+  max-width: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: none 0;
+  outline: 0px none !important;
+}
+input:focus, 
+textarea:focus, 
+a:focus {
+  outline: 0px none !important;
+}
+input,
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+.form-control::-webkit-input-placeholder,
+::-webkit-input-placeholder {
+  font-family:  $gotham-reg;
+  color: $color-black;
+  opacity: 1;
+}
+.form-control:-moz-placeholder,
+:-moz-placeholder {
+  font-family:  $gotham-reg;
+  color: $color-black;
+  opacity: 1;
+}
+.form-control::-moz-placeholder,
+::-moz-placeholder {
+  font-family:  $gotham-reg;
+  color: $color-black;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder,
+:-ms-input-placeholder {
+  font-family:  $gotham-reg;
+  color: $color-black;
+  opacity: 1;
+}
+.form-control,
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+textarea {
+    font-family:  $gotham-reg;
+    color: $color-black;
+    font-size: $txt-size;
+    padding: 0 15px;
+    background: $color-white;
+    height: 48px;
+    border: 1px solid $color-black;
+    @include border-radius(0);
+    width: 100%;
+    &:focus {
+        box-shadow: none;
+    }
+}
+textarea,
+textarea.form-control {
+    height: 200px;
+    resize: none;
+    padding: 15px;
+    line-height: 1.3;
+}
+select {
+  height: 50px;
+  color: $color-black;
+  font-size: $txt-size;
+  padding: 0 15px;
+  min-width: 214px;
+}
+
+.holder{
+  float:left;
+  width:100%;
+  background:#72a352;
+  min-height:50px;
+  margin-top:10px;
+}
+
+
+/* POSITIONING */
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify {
+  text-align: justify;
+}
+
+/* ==== GRID SYSTEM ==== */
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  @media only screen and (min-width: 768px) { 
+    width: 100%;
+    max-width: 756px;
+    padding: 0;
+  }
+  @media only screen and (min-width: 992px) { 
+    width: 100%;
+    max-width: 980px;
+    padding: 0;
+  }
+  @media only screen and (min-width: 1200px) { 
+    width: 100%;
+    max-width: 1194px;
+    padding: 0;
+  }
+  @media only screen and (min-width: 1500px) { 
+    width: 100%;
+    max-width: 1477px;
+    padding: 0;
+  }
+
+}
+
+.row {
+  position: relative;
+  width: 100%;
+}
+
+.row [class^="col"] {
+  float: left;
+  margin: 0 1%;
+  min-height: 0.125rem;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  width: 98%;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.hidden-sm {
+  display: none;
+}
+
+
+@media only screen and (min-width: 768px) {  
+  .col-1 {
+    width: 6.33%;
+  }
+
+  .col-2 {
+    width: 14.66%;
+  }
+
+  .col-3 {
+    width: 23%;
+  }
+
+  .col-4 {
+    width: 31.33%;
+  }
+
+  .col-5 {
+    width: 39.66%;
+  }
+
+  .col-6 {
+    width: 48%;
+  }
+
+  .col-7 {
+    width: 56.33%;
+  }
+
+  .col-8 {
+    width: 64.66%;
+  }
+
+  .col-9 {
+    width: 73%;
+  }
+
+  .col-10 {
+    width: 81.33%;
+  }
+
+  .col-11 {
+    width: 89.66%;
+  }
+
+  .col-12 {
+    width: 98%;
+  }
+
+  .hidden-sm {
+    display: block;
+  }
+}
+.btn-default {
+  display: inline-block;
+  height: 51px;
+  line-height: 49px;
+  border: 1px solid transparent;
+  background: $color-green;
+  color: $color-black;
+  min-width: 250px;
+  padding: 0 10px;
+  font-size: $size-base;
+  @include border-radius(10px);
+  text-align: center;
+  &:hover,
+  &:focus {
+    background: $color-white;
+    border-color: $color-green;
+    color: $color-black;
+  }
+  &.white {
+    background: $color-white;
+    &:hover,
+    &:focus {
+      background: $color-green;
+      border-color: $color-green;
+    }
+  }
+  &.border {
+    background: $color-white;
+    border-color: $color-green;
+    &:hover,
+    &:focus {
+      background: $color-green;
+      border-color: $color-green;
+    }
+  }
+}
+
+.main-outercon {
+  overflow: hidden;
+}

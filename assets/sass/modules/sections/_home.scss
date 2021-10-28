@@ -1,0 +1,476 @@
+/**********************************************
+   Home 
+***********************************************/ 
+
+.content-container {
+	width: 100%;
+	padding: 77px 0 60px;
+	.row {
+		@include flexbox;
+		@media #{$mobile-landscape} {
+			display: block;
+		}
+	}
+	.col-2 {
+	    @include flexbox;
+	    @media #{$mobile-landscape} {
+			display: block;
+		}
+	}
+	@media #{$tablet-landscape} {
+		.col-2 {
+		    width: 16.66%;
+		}
+		.col-10 {
+		    width: 79.33%;
+		}
+	}
+	@media #{$tablet-portrait} {
+		.col-2 {
+		    width: 18.66%;
+		}
+		.col-10 {
+		    width: 77.33%;
+		}
+	}
+	@media #{$mobile-landscape} {
+		padding: 40px 0 20px;
+	}
+}
+.content-block {
+	width: 100%;
+	padding-left: 26px;
+	@media #{$mobile-landscape} {
+		padding: 30px 0 0;
+	}
+}
+.content-row {
+	width: 100%;
+	display: block;
+	margin-top: 104px;
+	@media #{$tablet-portrait} {
+		margin-top: 80px;
+	}
+	@media #{$mobile-landscape} {
+		margin-top: 30px;
+	}
+	h2 {
+		margin-bottom: 64px;
+		@media #{$tablet-portrait} {
+			margin-bottom: 40px;
+		}
+		@media #{$mobile-landscape} {
+		    margin-bottom: 20px;
+		    word-wrap: break-word;
+		}
+	}
+	p {
+		a {
+			color: $color-black;
+			text-decoration: underline;
+			word-break: break-all;
+		}
+	}
+	&.distribution {
+		h2 {
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: $size-base;
+			line-height: 1.18;
+		}
+	}
+	&.breakdown {
+		h2 {
+			margin-bottom: 20px;
+			@media #{$mobile-landscape} {
+				margin-bottom: 15px;
+			}
+		}
+		.content-inner {
+			&:first-of-type {
+				margin-top: 55px;
+				@media #{$tablet-portrait} {
+					margin-top: 30px;
+				}
+				@media #{$mobile-landscape} {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}
+.sidebar-widget {
+	width: 100%;
+	max-width: 178px;
+	position: absolute;
+	@media #{$mobile-landscape} {
+		max-width: 100%;
+		position: relative!important;
+		&.sticksy-dummy-node {
+			display: none!important;
+		}
+	}
+	h6 {
+		text-transform: uppercase;
+		border-bottom: 1px solid $color-beige;
+		font-size: $txt-sm;
+		padding-bottom: 24px;
+		margin-bottom: 24px;
+	}
+	ul {
+		display: block;
+		width: 100%;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			display: block;
+			width: 100%;
+			margin-top: 28px;
+			@media #{$mobile-landscape} {
+				margin-top: 10px;
+			}
+			&:first-child {
+				margin-top: 0;
+			}
+			a {
+				display: inline-block;
+				font-size: $txt-size;
+				line-height: 1.33;
+				color: $color-black;
+				@media only screen and (min-width: 1200px) and (max-width: 1499px){ 
+					letter-spacing: -0.1px;
+				}
+				@media #{$tablet-portrait} {
+					font-size: $size-base;
+				}
+				&:hover,
+				&:focus {
+					color: $color-red;
+				}
+			}
+			&.current {
+				a {
+					color: $color-red;
+					font-family: $gotham-med;
+				}
+			}
+		}
+	}
+}
+.content-inner {
+	width: 100%;
+	@include flexbox;
+	@include flex-wrap(wrap);
+	margin-top: 55px;
+	@media #{$tablet-portrait} {
+		margin-top: 40px;
+	}
+	@media #{$mobile-landscape} {
+		margin-top: 30px;
+	}
+	&:first-of-type {
+		margin-top: 0;
+	}
+}
+.content-col {
+	width: 50%;
+	padding: 0 0 0 14px;
+	@media #{$tablet-portrait} {
+		width: 100%;
+		padding: 14px 0 0;
+	}
+	@media #{$mobile-landscape} {
+	    width: 100%;
+		padding: 10px 0 0;
+	}
+	&:first-child {
+		padding: 0 32px 0 0;
+		@media #{$tablet-portrait} {
+			padding: 14px 0 0;
+		}
+		@media #{$mobile-landscape} {
+			padding: 0;
+		}
+	}
+	img {
+		display: block;
+	}
+}
+.button-block {
+	@include flexbox;
+	@include justify-content(center);
+	@include flex-direction(column);
+	padding: 68px 0 0;
+	@media #{$tablet-portrait} {
+		padding: 30px 0 20px;
+	}
+	@media #{$mobile-landscape} {
+		padding: 20px 0 20px;
+	}
+	.btn-default {
+		margin: 10px auto 0;
+	}
+}
+.graph-card {
+	@include flexbox;
+	@include flex-direction(column);
+	@include justify-content(center);
+	@include align-items(center);
+	padding: 28px 20px;
+	border: 1px solid $color-beige;
+	@include border-radius(10px);
+	max-width: 524px;
+	width: 100%;
+	height: 232px;
+	margin-top: 29px;
+	text-align: center;
+	@media #{$mobile-landscape} {
+		margin-top: 20px;
+		height: 160px;
+		padding: 28px 15px;
+	}
+	&:first-of-type {
+		margin-top: 56px;
+		@media #{$mobile-landscape} {
+			margin-top: 20px;
+		}
+	}
+	h3 {
+		font-size: 55px;
+		font-family: $gotham-blk;
+		@media #{$tablet-landscape} {
+			font-size: 50px;
+		}
+		@media #{$mobile-landscape} {
+		    font-size: 40px;
+		}
+		span {
+			color: $color-green;
+			
+		}
+	}
+	p {
+		margin-bottom: 0;
+		font-family: $gotham-med;
+	}
+}
+.order-md-2 {
+	@media #{$tablet-portrait} {
+		@include order(2);
+	}
+	@media #{$mobile-landscape} {
+		@include order(2);
+	}
+}
+.order-md-1 {
+	@media #{$tablet-portrait} {
+		@include order(1);
+	}
+	@media #{$mobile-landscape} {
+		@include order(1);
+	}
+}
+.tab-links {
+	list-style: none;
+	@include flexbox;
+	width: 100%;
+	margin: 0 0 40px;
+	padding: 30px 0 0;
+	@media #{$tablet-portrait} {
+		margin: 0 0 30px;
+		padding: 10px 0 0;
+	}
+	@media #{$mobile-landscape} {
+		@include flex-wrap(wrap);
+		margin: 0 0 25px;
+		padding: 0;
+	}
+	li {
+		@include flexbox;
+		@include align-items(center);
+		@include justify-content(center);
+		padding: 0 5px;
+		border-left: 1px solid $color-beige;
+		text-align: center;
+		width: 17%;
+		max-height: 38px;
+		@media #{$tablet-landscape} {
+			max-height: 53px;
+			padding: 0 3px;
+		}
+		@media #{$mobile-landscape} {
+			width: 100%;
+			max-height: inherit;
+			border-left: 0;
+			border-bottom: 1px solid $color-beige;
+			padding: 10px 10px 12px;
+		}
+		&:first-child {
+			border-left: 0;
+		}
+		a {
+			display: inline-block;
+			color: $color-black;
+			font-size: $size-base;
+			line-height: 1.18;
+			@media only screen and (min-width: 1200px) and (max-width: 1499px){ 
+				font-size: 15px;
+			}
+			@media #{$tablet-landscape} {
+				font-size: 15px;
+				letter-spacing: -0.1px;
+			}
+			@media #{$tablet-portrait} {
+				font-size: 11px;
+				letter-spacing: -0.1px;
+			}
+			&:hover,
+			&:focus {
+				font-family: $gotham-med;
+				text-decoration: underline;
+				text-decoration-color: $color-green;
+			}
+		}
+		&.active {
+			a {
+				font-family: $gotham-med;
+				text-decoration: underline;
+				text-decoration-color: $color-green;
+			}
+		}
+	}
+}
+.map-block {
+	width: 100%;
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+
+.text-box {
+    background: $color-beige;
+    padding: 23px 23px;
+    @include border-radius(12px);
+    margin: 58px 0 0;
+    
+     @media #{$tablet-landscape} {
+        margin: 40px 0 0;
+     }
+     @media #{$tablet-portrait} {
+        margin: 40px 0 0;
+     }
+     @media #{$mobile-landscape} {
+        margin: 28px 0 0;
+     }
+
+    
+    li{
+        list-style-position: inside;
+    }
+    ol{
+        padding: 0 0 0 4px;
+        > li{
+            list-style-type: none;
+            font-family: $roboto-reg;
+                     
+            strong{
+                font-weight: normal;
+                font-family: $roboto-bld;
+                @include flexbox;
+                span{
+                    min-width: 22px;
+                }
+            }
+        }
+        ol{
+            li{
+                list-style-type: lower-alpha;
+            }
+        }
+    }
+    ol.lower {
+        list-style-type: lower-alpha;
+        padding: 0 0 0 29px;
+        text-indent: 0px; 
+        margin-left: 20px; 
+        @media #{$mobile-landscape} {
+           padding: 0 0 0 24px;
+        }
+        li{
+            list-style: lower-alpha;
+        }
+    }
+    h5{
+        padding: 0 0 25px;
+        
+        @media #{$tablet-portrait} {
+            font-size: 20px;
+        }        
+        @media #{$mobile-landscape} {
+           padding: 0 0 15px;
+            font-size: 20px;
+        }
+    }
+}
+
+.method-list {
+    @include flexbox;
+    padding: 36px 0 0;   
+       
+    @media #{$mobile-landscape} {
+      @include flex-direction(column);
+      padding: 0;
+    }
+    
+    li{
+        list-style: none;
+        width: 25%;
+        padding: 0 50px 0 0;
+        
+        @media #{$desktop-xl} {
+            padding: 0 35px  0 0;
+        }
+        @media #{$tablet-landscape} {
+            padding: 0 25px 0 0;
+        }
+        @media #{$tablet-portrait} {
+            padding: 0 10px  0 0;
+        }
+        @media #{$mobile-landscape} {
+            width: 100%;
+            padding: 0;
+        }
+
+        img{
+            margin: 0 0 10px;
+            @media #{$tablet-portrait} {
+                width: 40px;
+            }
+            @media #{$mobile-landscape} {
+               margin: 0;
+            }
+        }
+    }
+    
+}
+
+.chart-block {
+	@include flexbox;
+	width: 100%;
+}
+.piechart1 {
+	max-width: 240px;
+	width: 100%;
+}
+.piechart2 {
+	max-width: 160px;
+	width: 100%;
+}
+.fixed-sidebar {
+	position: relative;
+	width: 100%;
+}

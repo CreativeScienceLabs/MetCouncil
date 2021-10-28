@@ -1,0 +1,249 @@
+@import "_variables";
+
+@mixin border-radius($radius){ //@include border-radius(3px);
+    -moz-border-radius:    $radius;
+    -webkit-border-radius: $radius;
+    border-radius:         $radius;
+}
+
+
+@mixin transition ($transition) { //@include transition (all .3s ease-in-out);
+    -webkit-transition: $transition;  
+    -moz-transition:    $transition;
+    -ms-transition:     $transition; 
+    -o-transition:      $transition;  
+    transition:         $transition;  
+}
+
+@mixin transform-translatey($val){ //@include transform-translatey(-50%);
+    -webkit-transform: translateY($val);
+    -moz-transform   : translateY($val);
+    -o-transform     :translateY($val);
+    -ms-transform    :translateY($val);
+    transform        : translateY($val);
+}
+
+@mixin transform-translatex($val){ //@include transform-translatex(-50%);
+    -webkit-transform: translateX($val);
+    -moz-transform   : translateX($val);
+    -o-transform     :translateX($val);
+    -ms-transform    :translateX($val);
+    transform        : translateX($val);
+}
+
+@mixin translate($val, $val1){ //@include translate(-50%, -50%);
+    -webkit-transform: translate($val, $val1);
+    -moz-transform: translate($val, $val1);
+    -o-transform:translate($val, $val1);
+    transform: translate($val, $val1);
+}
+
+@mixin rotate($val){ //@include rotate(90deg);
+    -webkit-transform: rotate($val);
+    -moz-transform   : rotate($val);
+    -o-transform     : rotate($val);
+    -ms-transform    : rotate($val);
+    transform        : rotate($val);
+}
+
+@mixin transform($value){ 
+    -webkit-transform: $value;
+    -moz-transform   : $value;
+    -o-transform     : $value;
+    -ms-transform    : $value;
+    transform        : $value;
+}
+
+@mixin scale($val){ //@include scale(1.05);
+    -webkit-transform: scale($val);
+    -moz-transform   : scale($val);
+    -o-transform     : scale($val);
+    -ms-transform    : scale($val);
+    transform        : scale($val);
+}
+
+@mixin transform-origin ($origin) { //@include transform-origin(left center); 
+    moz-transform-origin: $origin;
+	     -o-transform-origin: $origin;
+	    -ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+          transform-origin: $origin;
+}
+
+@mixin box-shadow($horizontal, $vertical, $blur, $spread, $color, $inset: false) { //@include box-shadow(0px, 7px, 21px, 0px, rgba(222, 222, 222, 0.75));
+    @if $inset {
+        -webkit-box-shadow:inset $horizontal $vertical $blur $spread  $color;
+        -moz-box-shadow:inset $horizontal $vertical $blur $spread  $color;
+        box-shadow:inset $horizontal $vertical $blur $spread $color;
+    } @else {
+        -webkit-box-shadow: $horizontal $vertical $blur $spread  $color;
+        -moz-box-shadow: $horizontal $vertical $blur $spread  $color; 
+        box-shadow: $horizontal $vertical $blur $spread $color;
+    }
+}
+
+@mixin linearGradient($top, $bottom){    //@include linearGradient(#cccccc, #666666);
+    background: $top; 
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); 
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%);
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); 
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%);
+}
+
+@mixin multipleColumns($val, $val1){ //@include multipleColumns(2, 60px);
+     -webkit-column-count: $val;
+     -moz-column-count: $val;
+     column-count: $val;
+     -webkit-column-gap: $val1;
+     -moz-column-gap: $val1;
+     column-gap: $val1;
+}
+// Flexbox Mixins
+@mixin flexbox {
+	//@include flexbox;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+// Display Order
+// - applies to: flex items
+// <integer>
+@mixin order($val) {
+	//@include order($val);
+  -webkit-box-ordinal-group: $val;  
+     -moz-box-ordinal-group: $val;     
+  	     -ms-flex-order: $val;     
+  	      -webkit-order: $val;  
+  		      order: $val;
+}
+// Flexbox Direction
+@mixin flex-direction($value: row) {
+	//@include flex-direction($args...);
+	@if $value==row-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: horizontal;
+	}
+	@else if $value==column {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: vertical;
+	}
+	@else if $value==column-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: vertical;
+	}
+	@else {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: horizontal;
+	}
+	-webkit-flex-direction: $value;
+	-moz-flex-direction: $value;
+	-ms-flex-direction: $value;
+	flex-direction: $value;
+}
+// Flexbox Wrap
+@mixin flex-wrap($value: nowrap) {
+	//@include flex-wrap($args...);
+	// No Webkit Box fallback.
+	-webkit-flex-wrap: $value;
+	-moz-flex-wrap: $value;
+	@if $value==nowrap {
+		-ms-flex-wrap: none;
+	}
+	@else {
+		-ms-flex-wrap: $value;
+	}
+	flex-wrap: $value;
+}
+// Flexbox Grow
+@mixin flex-grow($int: 0) {
+	//@include flex-grow($int: 0);
+	-webkit-box-flex: $int;
+	-webkit-flex-grow: $int;
+	-moz-flex-grow: $int;
+	-ms-flex-positive: $int;
+	flex-grow: $int;
+}
+// Flexbox Justify Content
+@mixin justify-content($value: flex-start) {
+	// @include justify-content($args...);
+	@if $value==flex-start {
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+	}
+	@else if $value==flex-end {
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+	}
+	@else if $value==space-between {
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+	}
+	@else if $value==space-around {
+		-ms-flex-pack: distribute;
+	}
+	@else {
+		-webkit-box-pack: $value;
+		-ms-flex-pack: $value;
+	}
+	-webkit-justify-content: $value;
+	-moz-justify-content: $value;
+	justify-content: $value;
+}
+// Flexbox Align Items
+@mixin align-items($value: stretch) {
+	// @include align-items($args...);
+	@if $value==flex-start {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+	}
+	@else if $value==flex-end {
+		-webkit-box-align: end;
+		-ms-flex-align: end;
+	}
+	@else {
+		-webkit-box-align: $value;
+		-ms-flex-align: $value;
+	}
+	-webkit-align-items: $value;
+	-moz-align-items: $value;
+	align-items: $value;
+}
+// Flexbox Align Self
+@mixin align-self($value: auto) {
+	// @include align-self($args...);
+	// No Webkit Box Fallback.
+	-webkit-align-self: $value;
+	-moz-align-self: $value;
+	@if $value==flex-start {
+		-ms-flex-item-align: start;
+	}
+	@else if $value==flex-end {
+		-ms-flex-item-align: end;
+	}
+	@else {
+		-ms-flex-item-align: $value;
+	}
+	align-self: $value;
+}
+// Flexbox Align Content 
+@mixin align-content($value: stretch) {
+	// @include align-content($args...);
+	// No Webkit Box Fallback.
+	-webkit-align-content: $value;
+	-moz-align-content: $value;
+	@if $value==flex-start {
+		-ms-flex-line-pack: start;
+	}
+	@else if $value==flex-end {
+		-ms-flex-line-pack: end;
+	}
+	@else {
+		-ms-flex-line-pack: $value;
+	}
+	align-content: $value;
+}

@@ -1,0 +1,1 @@
+jQuery(function(){jQuery("#nav").onePageNav(),jQuery.fn.sticksy&&jQuery(".js-sticky-widget").length&&jQuery(".js-sticky-widget").sticksy({topSpacing:20,listen:!0})});

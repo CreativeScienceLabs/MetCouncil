@@ -1,0 +1,53 @@
+// Variables
+// --------------------------  
+
+// Colors and backgrounds
+// --------------------------
+
+$color-black:                 #000000;
+$color-white: 		          #ffffff;
+$color-red:                   #E84343;
+$color-grey-dark:             #3A3A3A;
+$color-beige:			  	  #F2EDE4;
+$color-beige-dark:			  #E0D8CF;
+$color-green:             	  #60DC6D;
+$color-yellow:			  	  #FFCE21;
+
+
+
+
+//== Typography
+// -------------------------- 
+$gotham-bld: 			'Gotham Bold';
+$gotham-med: 			'GothamMedium';
+$gotham-blk: 			'Gotham-Black';
+$gotham-reg: 			'Gotham Book';
+$roboto-bld:			'Roboto-Bold';
+$roboto-reg:			'Roboto-Regular';
+
+$bold: 700;
+$normal: 400;
+
+$size-base:    16px !default; 
+
+$size-h1:    ceil(($size-base * 4.5)) 		!default;   // ~72px
+$size-h2:    ceil(($size-base * 3)) 		!default;   // ~48px
+$size-h3:    ceil(($size-base * 2.75)) 		!default;   // ~44px
+$size-h4:    ceil(($size-base * 2.25)) 		!default;   // ~36px
+$size-h5:    ceil(($size-base * 1.5)) 		!default;   // ~24px
+$size-h6:    ceil(($size-base * 1)) 		!default;   // ~16px
+
+
+$txt-size:   ceil(($size-base * 1.125)) 	!default;   // ~18px
+$txt-sm:     ceil(($size-base * 0.75)) 		!default;   // ~12px
+
+
+
+//== Media queries breakpoints
+$desktop-only:      "(min-width: 768px)";/*@media #{$desktop-only} {}*/
+$desktop-xl:  		"(min-width: 1200px) and (max-width: 1365px)"; 
+$tablet-landscape:  "(min-width: 992px) and (max-width: 1199px)";  
+$tablet-portrait:   "(min-width: 768px) and (max-width: 991px)";
+$mobile-landscape:  "only screen and (max-width : 767px)";
+$mobile-portrait:   "only screen and (max-width : 479px)";  
+$mobile-xs:   "only screen and (max-width : 415px)";  

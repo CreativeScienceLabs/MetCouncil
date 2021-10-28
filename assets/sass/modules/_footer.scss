@@ -1,0 +1,112 @@
+/**********************************************
+   Footer 
+***********************************************/ 
+
+.footer-container {
+	width: 100%;
+}
+.footer-top {
+	background: $color-grey-dark;
+	padding: 48px 0;
+	max-width: 1740px;
+	width: 100%;
+	margin: 0 auto;
+	@include border-radius(100px 100px 0px 0px);
+	position: relative;
+	@media #{$mobile-landscape} {
+		padding: 20px 0;
+		@include border-radius(50px 50px 0px 0px);
+		padding: 30px 0;
+	}
+	&:before {
+		position: absolute;
+		content: "";
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: url(../images/bg-image1.png) repeat left top;
+		mix-blend-mode: multiply;
+		@include border-radius(100px 100px 0px 0px);
+		@media #{$mobile-landscape} {
+			@include border-radius(50px 50px 0px 0px);
+		}
+	}
+	.report-block {
+		margin: 0 auto;
+	}
+}
+.footer-bottom {
+	width: 100%;
+	text-align: center;
+	background: $color-red;
+	padding: 33px 0;
+	@media #{$tablet-portrait} {
+		padding: 24px 0;
+	}
+	@media #{$mobile-landscape} {
+		padding: 20px 0;
+	}
+	p {
+		margin-bottom: 0;
+		color: $color-white;
+		img {
+			display: inline-block;
+			vertical-align: top;
+			margin: 4px 0 0 8px;
+			opacity: 0.5;
+		}
+	}
+}
+.footer-content {
+	width: 100%;
+	padding: 0 0 0 80px;
+	@media only screen and (min-width: 1200px) and (max-width: 1499px){ 
+		padding: 0 0 0 55px;
+	}
+	@media #{$tablet-landscape} {
+		padding: 0 0 0 30px;
+	}
+	@media #{$tablet-portrait} {
+		padding: 0;
+	}
+	@media #{$mobile-landscape} {
+		padding: 20px 0 0;
+	}
+	h2 {
+		color: $color-white;
+		font-size: $size-h1;
+		margin-bottom: 20px;
+		@media #{$tablet-landscape} {
+			font-size: 60px;
+		}
+		@media #{$tablet-portrait} {
+			font-size: $size-h2;
+		}
+		@media #{$mobile-landscape} {
+			font-size: 50px;
+			line-height: 1;
+		}
+		span {
+			display: block;
+			font-family: $gotham-reg;
+			font-size: $size-h2;
+			margin: 10px 0 0;
+			@media #{$tablet-landscape} {
+				font-size: 42px;
+			}
+			@media #{$tablet-portrait} {
+				font-size: 38px;
+			}
+			@media #{$mobile-landscape} {
+				font-size: 35px;
+			}
+		}
+	}
+	p {
+		color: $color-white;
+		width: 100%;
+		max-width: 505px;
+		margin-bottom: 30px;
+	}
+}
