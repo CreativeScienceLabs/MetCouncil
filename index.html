@@ -138,9 +138,6 @@
                                 <div class="content-inner">
                                     <div class="content-col">
                                         <canvas id="myChart" width="400" height="400"></canvas>
-                                        <div class="chart-legend">
-
-                                        </div>
                                     </div>
                                     <div class="content-col">
                                         <p>Our analysis of the data found that of the 128.7 million meals delivered, nearly 27 million were kosher (13.7 percent) or halal (7.2 percent). Demand for both kosher and halal food was distributed across all five boroughs, with the highest demand in Brooklyn, Queens, and the Bronx.2 Kosher meals were a significant portion of all GetFoodNYC deliveries in many ZIP codes across the city. These numbers should not be a surprise, as New York is home to the largest Jewish and Muslim populations in the United States.</p>
@@ -379,7 +376,7 @@
         const myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ['', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                labels: ['', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'],
                 datasets: [
                 {
                     label: 'Kosner Percent of Total',
@@ -456,7 +453,7 @@
         const myChart2 = new Chart(ctx2, {
             type: 'line',
             data: {
-                labels: ['', 'May 2020', 'July 2020', 'September 2020', 'November 2020', 'January 2021', 'March 2021', 'May 2021', 'July 2021','September 2021'],
+                labels: ['', 'May 2020', 'July 2020', 'Sep. 2020', 'Nov. 2020', 'Jan. 2021', 'March 2021', 'May 2021', 'July 2021','Sept. 2021'],
                 datasets: [
                 {
                     label: 'Growth Rate: Kosher Meals',
