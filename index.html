@@ -15,6 +15,9 @@
         .chartSwitch:focus {
             background: #60dc6d;
         }
+        .chart-legend {
+            font-size: 12px;
+        }
         @media screen and (max-width: 500px){
             div.piechart1 {
                 max-width: 180px;
@@ -126,6 +129,9 @@
                                 <div class="content-inner">
                                     <div class="content-col">
                                         <canvas id="myChart" width="400" height="400"></canvas>
+                                        <div class="chart-legend">
+
+                                        </div>
                                     </div>
                                     <div class="content-col">
                                         <p>Our analysis of the data found that of the 128.7 million meals delivered, nearly 27 million were kosher (13.7 percent) or halal (7.2 percent). Demand for both kosher and halal food was distributed across all five boroughs, with the highest demand in Brooklyn, Queens, and the Bronx.2 Kosher meals were a significant portion of all GetFoodNYC deliveries in many ZIP codes across the city. These numbers should not be a surprise, as New York is home to the largest Jewish and Muslim populations in the United States.</p>
@@ -137,6 +143,9 @@
                                     </div>
                                     <div class="content-col order-md-1">
                                         <canvas id="myChart2" width="400" height="400"></canvas>
+                                        <div class="chart-legend">
+                                            When we separate out kosher and halal percentages, we can see that both kosher and halal trend at similar rates.
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -187,7 +196,12 @@
                                 <h6>Meals delivered by GetFoodNYC (March 2020 - December 2020)</h6>
                                 <div class="content-inner">
                                     <div class="content-col">
-                                        <canvas id="myChart3" width="400" height="400"></canvas>
+                                        <div id="chart3-wrapper">
+                                            <canvas id="myChart3" width="400" height="400"></canvas>
+                                            <div class="chart-legend">
+                                                In the early months of the pandemic, from March 2020 through December 2020, June was the month with the highest demand for GetFoodNYC. Kosher and halal meals comprised 25 percent of the meals distributed that month.  While the total number of meals distributed starts to decline after June 2020, the demand for kosher and halal meals held steady and even rose slightly through September 2020.
+                                            </div>
+                                        </div>
                                         <canvas id="myNewChart" style="display: none;" width="400" height="400"></canvas>
                                         <div class="button-block">
                                             <a href="#" id="chartSwitch1" class="btn-default chartSwitch">2020 Monthly Meals</a>
@@ -339,14 +353,14 @@
         jQuery( document ).ready(function() {
             $('#chartSwitch1').on( "click", function(e) {
                 e.preventDefault();
-                $('#myChart3').show();
+                $('#chart3-wrapper').show();
                 $('#myNewChart').hide();
                 $(this).removeClass('border');
                 $('#chartSwitch2').addClass('border');
             });
             $('#chartSwitch2').on( "click", function(e) {
                 e.preventDefault();
-                $('#myChart3').hide();
+                $('#chart3-wrapper').hide();
                 $('#myNewChart').show();
                 $(this).removeClass('border');
                 $('#chartSwitch1').addClass('border');
