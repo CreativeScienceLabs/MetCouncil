@@ -266,24 +266,8 @@
                                 <li><a data-map="viz1635188442529" href="#">NYC Congressional Districts</a></li>
                             </ul>
                             <div class="map-block">
-                                <script type='text/javascript'>
-                                    const tabClick = (el) => {
-                                        el.preventDefault();
-                                        document.querySelector('.tab-links li[class=active]').classList.remove('active');
-                                        el.target.parentElement.classList.add('active');
-                                        document.querySelector('.map-block div.tableauPlaceholder.show').classList.remove('show')
-                                        document.querySelector(`.map-block div.tableauPlaceholder#${el.target.dataset.map}`).classList.add('show');
-
-                                        return false;
-                                    };
-                                    const tabs = document.querySelectorAll('.tab-links li a');
-                                    for (const tab of tabs) {
-                                        tab.addEventListener('click', tabClick)
-                                    }
-
-                                </script>
                                 <!-- NYC Zip Codes -->
-                                <div class='tableauPlaceholder show' id='viz1635167411009' style='display:none;position: relative'>
+                                <div class='tableauPlaceholder show' id='viz1635167411009' style='position: relative'>
                                     <noscript>
                                         <a href='#'>
                                             <img alt=' '
@@ -309,25 +293,8 @@
                                         <param name='filter' value='publish=yes'/>
                                     </object>
                                 </div>
-                                <script type='text/javascript'>
-                                    var divElement = document.getElementById('viz1635167411009');
-                                    var vizElement = divElement.getElementsByTagName('object')[0];
-                                    if (divElement.offsetWidth > 800) {
-                                        vizElement.style.width = '100%';
-                                        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                                    } else if (divElement.offsetWidth > 500) {
-                                        vizElement.style.width = '100%';
-                                        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                                    } else {
-                                        vizElement.style.width = '100%';
-                                        vizElement.style.height = '877px';
-                                    }
-                                    var scriptElement = document.createElement('script');
-                                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-                                </script>
                                 <!-- NYC Neighborhoods -->
-                                <div class='tableauPlaceholder' id='viz1635187931816' style='display:none;position: relative'>
+                                <div class='tableauPlaceholder' id='viz1635187931816' style='position: relative'>
                                     <noscript><a href='#'><img alt=' '
                                                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;NTADashboard&#47;1_rss.png'
                                                                style='border: none'/></a></noscript>
@@ -349,23 +316,8 @@
                                         <param name='filter' value='publish=yes'/>
                                     </object>
                                 </div>
-                                <script type='text/javascript'>                    var divElement = document.getElementById('viz1635187931816');
-                                var vizElement = divElement.getElementsByTagName('object')[0];
-                                if (divElement.offsetWidth > 800) {
-                                    vizElement.style.width = '100%';
-                                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                                } else if (divElement.offsetWidth > 500) {
-                                    vizElement.style.width = '100%';
-                                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                                } else {
-                                    vizElement.style.width = '100%';
-                                    vizElement.style.height = '877px';
-                                }
-                                var scriptElement = document.createElement('script');
-                                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                                vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
                                 <!-- NYC Council Districts -->
-                                <div class='tableauPlaceholder' id='viz1635188092235' style='display:none;position: relative'>
+                                <div class='tableauPlaceholder' id='viz1635188092235' style='position: relative'>
                                     <noscript><a href='#'><img alt=' '
                                                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;CCDashboard&#47;1_rss.png'
                                                                style='border: none'/></a></noscript>
@@ -387,23 +339,8 @@
                                         <param name='filter' value='publish=yes'/>
                                     </object>
                                 </div>
-                                <script type='text/javascript'>                    var divElement = document.getElementById('viz1635188092235');
-                                var vizElement = divElement.getElementsByTagName('object')[0];
-                                if (divElement.offsetWidth > 800) {
-                                    vizElement.style.width = '100%';
-                                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                                } else if (divElement.offsetWidth > 500) {
-                                    vizElement.style.width = '100%';
-                                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                                } else {
-                                    vizElement.style.width = '100%';
-                                    vizElement.style.height = '877px';
-                                }
-                                var scriptElement = document.createElement('script');
-                                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                                vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
                                 <!-- NYC Assembly Districts -->
-                                <div class='tableauPlaceholder' id='viz1635188176915' style='display:none;position: relative'>
+                                <div class='tableauPlaceholder' id='viz1635188176915' style='position: relative'>
                                     <noscript><a href='#'><img alt=' '
                                                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;ADDashboard&#47;1_rss.png'
                                                                style='border: none'/></a></noscript>
@@ -425,23 +362,8 @@
                                         <param name='filter' value='publish=yes'/>
                                     </object>
                                 </div>
-                                <script type='text/javascript'>                    var divElement = document.getElementById('viz1635188176915');
-                                var vizElement = divElement.getElementsByTagName('object')[0];
-                                if (divElement.offsetWidth > 800) {
-                                    vizElement.style.width = '100%';
-                                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                                } else if (divElement.offsetWidth > 500) {
-                                    vizElement.style.width = '100%';
-                                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                                } else {
-                                    vizElement.style.width = '100%';
-                                    vizElement.style.height = '877px';
-                                }
-                                var scriptElement = document.createElement('script');
-                                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                                vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
                                 <!-- NYC Senate Districts -->
-                                <div class='tableauPlaceholder' id='viz1635188280698' style='display:none;position: relative'>
+                                <div class='tableauPlaceholder' id='viz1635188280698' style='position: relative'>
                                     <noscript><a href='#'><img alt=' '
                                                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;SDDashboard&#47;1_rss.png'
                                                                style='border: none'/></a></noscript>
@@ -463,23 +385,8 @@
                                         <param name='filter' value='publish=yes'/>
                                     </object>
                                 </div>
-                                <script type='text/javascript'>                    var divElement = document.getElementById('viz1635188280698');
-                                var vizElement = divElement.getElementsByTagName('object')[0];
-                                if (divElement.offsetWidth > 800) {
-                                    vizElement.style.width = '100%';
-                                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                                } else if (divElement.offsetWidth > 500) {
-                                    vizElement.style.width = '100%';
-                                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                                } else {
-                                    vizElement.style.width = '100%';
-                                    vizElement.style.height = '877px';
-                                }
-                                var scriptElement = document.createElement('script');
-                                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                                vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
                                 <!-- NYC Congressional Districts -->
-                                <div class='tableauPlaceholder' id='viz1635188442529' style='display:none;position: relative'>
+                                <div class='tableauPlaceholder' id='viz1635188442529' style='position: relative'>
                                     <noscript><a href='#'><img alt=' '
                                                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;CDDashboard&#47;1_rss.png'
                                                                style='border: none'/></a></noscript>
@@ -501,21 +408,39 @@
                                         <param name='filter' value='publish=yes'/>
                                     </object>
                                 </div>
-                                <script type='text/javascript'>                    var divElement = document.getElementById('viz1635188442529');
-                                var vizElement = divElement.getElementsByTagName('object')[0];
-                                if (divElement.offsetWidth > 800) {
-                                    vizElement.style.width = '100%';
-                                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                                } else if (divElement.offsetWidth > 500) {
-                                    vizElement.style.width = '100%';
-                                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                                } else {
-                                    vizElement.style.width = '100%';
-                                    vizElement.style.height = '877px';
-                                }
-                                var scriptElement = document.createElement('script');
-                                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                                vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+                                <script type='text/javascript'>
+                                    const tabClick = (el) => {
+                                        el.preventDefault();
+                                        document.querySelector('.tab-links li[class=active]').classList.remove('active');
+                                        el.target.parentElement.classList.add('active');
+                                        document.querySelector('.map-block div.tableauPlaceholder.show').classList.remove('show')
+                                        document.querySelector(`.map-block div.tableauPlaceholder#${el.target.dataset.map}`).classList.add('show');
+
+                                        return false;
+                                    };
+                                    const initTableau = (divElement) => {
+                                        var vizElement = divElement.getElementsByTagName('object')[0];
+                                        if (divElement.offsetWidth > 800) {
+                                            vizElement.style.width = '100%';
+                                            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                                        } else if (divElement.offsetWidth > 500) {
+                                            vizElement.style.width = '100%';
+                                            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                                        } else {
+                                            vizElement.style.width = '100%';
+                                            vizElement.style.height = '877px';
+                                        }
+                                        var scriptElement = document.createElement('script');
+                                        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                                        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                                    }
+                                    const tabs = document.querySelectorAll('.tab-links li a');
+                                    for (const tab of tabs) {
+                                        tab.addEventListener('click', tabClick);
+                                        initTableau(document.getElementById(tab.dataset.map));
+                                    }
+                                </script>
                             </div>
                         </div>
                         <div class="content-row breakdown" id="block4">
