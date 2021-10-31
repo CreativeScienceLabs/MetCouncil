@@ -42,5 +42,5 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
         
       - name: rsync over ssh
-        run: rsync -chavzP --exclude={.git} . csldev:${{ secrets.PRODUCTION_PATH }}
+        run: rsync -chavzP --exclude '.git' . csldev:${{ secrets.PRODUCTION_PATH }}
 
