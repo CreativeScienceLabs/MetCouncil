@@ -19,9 +19,11 @@
         .chart-legend {
             font-size: 12px;
         }
+
         .tableauPlaceholder {
             display: none !important;
         }
+
         .tableauPlaceholder.show {
             display: block !important;
         }
@@ -258,7 +260,7 @@
                             <h2>GetFoodNYC Meal Distribution</h2>
                             <p>Click on the map or use the options above it to start exploring</p>
                             <ul class="tab-links">
-                                <li class="active"><a data-map="viz1635167411009" href="#">NYC Zip Codes</a></li>
+                                <li class="active"><a data-map="viz1635364906919" href="#">NYC Zip Codes</a></li>
                                 <li><a data-map="viz1635187931816" href="#">NYC Neighborhoods</a></li>
                                 <li><a data-map="viz1635188092235" href="#">NYC Council Districts</a></li>
                                 <li><a data-map="viz1635188176915" href="#">NYC Assembly Districts</a></li>
@@ -267,14 +269,10 @@
                             </ul>
                             <div class="map-block">
                                 <!-- NYC Zip Codes -->
-                                <div class='tableauPlaceholder show' id='viz1635167411009' style='position: relative'>
-                                    <noscript>
-                                        <a href='#'>
-                                            <img alt=' '
-                                                 src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;ZipCodeDashboard&#47;1_rss.png'
-                                                 style='border: none'/>
-                                        </a>
-                                    </noscript>
+                                <div class='tableauPlaceholder show' id='viz1635364906919' style='position: relative'>
+                                    <noscript><a href='#'><img alt='Zip Code Dashboard '
+                                                               src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;ZipCodeDashboard&#47;1_rss.png'
+                                                               style='border: none'/></a></noscript>
                                     <object class='tableauViz' style='display:none;'>
                                         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
                                         <param name='embed_code_version' value='3'/>
@@ -290,7 +288,6 @@
                                         <param name='display_overlay' value='yes'/>
                                         <param name='display_count' value='yes'/>
                                         <param name='language' value='en-US'/>
-                                        <param name='filter' value='publish=yes'/>
                                     </object>
                                 </div>
                                 <!-- NYC Neighborhoods -->
@@ -656,8 +653,6 @@
                     <div class="col-7">
                         <div class="footer-content">
                             <h2>Have Questions? <span>Please Contact Us.</span></h2>
-                            <p>Quidam officiis similique sea ei, vel tollit indoctum efficiendi ei, at nihil tantas
-                                platonem eos. Mazim nemore singulis an ius, nullam ornatus nam ei.</p>
                             <a href="mailto:info@metcouncil.org" class="btn-default white">Contact Us</a>
                         </div>
                     </div>
@@ -712,7 +707,7 @@
             labels: ['', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'],
             datasets: [
                 {
-                    label: 'Kosner Percent of Total',
+                    label: 'Kosher Percent of Total',
                     data: [, 0, 4, 11, 14, 16, 18, 16, 15, 14, 13],
                     fill: true,
                     backgroundColor: 'rgb(132,229,162)',
@@ -734,7 +729,7 @@
             plugins: {
                 title: {
                     display: true,
-                    text: 'Kosner and Halal Percent of Total GetFood NYC Meals'
+                    text: 'Kosher and Halal Percent of Total GetFood NYC Meals'
                 },
                 legend: {
                     title: {
