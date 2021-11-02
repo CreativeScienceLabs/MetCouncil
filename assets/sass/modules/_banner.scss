@@ -113,6 +113,8 @@
 .top-content {
 	width: 100%;
 	min-height: 460px;
+	background-image: url("/dist/images/cover.png");
+	background-size: cover;
 	@media only screen and (min-width: 1200px) and (max-width: 1499px){ 
 		min-height: 420px;
 	}
