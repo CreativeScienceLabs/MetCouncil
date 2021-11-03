@@ -51,6 +51,9 @@
 	width: 100%;
 	display: block;
 	margin-top: 104px;
+	&:first-of-type {
+		margin-top: 0;
+	}
 	@media #{$tablet-portrait} {
 		margin-top: 80px;
 	}
@@ -235,7 +238,7 @@
 		padding: 28px 15px;
 	}
 	&:first-of-type {
-		margin-top: 56px;
+		margin-top: 0;
 		@media #{$mobile-landscape} {
 			margin-top: 20px;
 		}
