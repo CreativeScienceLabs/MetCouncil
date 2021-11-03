@@ -418,7 +418,10 @@
         }
     }
 }
-
+.center-col {
+	display: flex;
+	align-items: center;
+}
 .method-list {
     @include flexbox;
     padding: 36px 0 0;   
