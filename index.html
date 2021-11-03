@@ -543,7 +543,7 @@
             datasets: [
                 {
                     label: 'Kosher Percent of Total',
-                    data: [0, 4, 12, 14, 16, 17, 19, 17, 15, 13],
+                    data: [0, 4.2, 11.7, 13.6, 15.6, 16.9, 18.5, 16.6, 14.9, 13.5],
                     fill: true,
                     backgroundColor: 'rgb(132,229,162)',
                     hoverBackgroundColor: 'rgba(132,229,162,0.7)',
@@ -553,7 +553,7 @@
                 },
                 {
                     label: 'Halal Percent of Total',
-                    data: [0, 2, 8, 9, 9, 7, 6, 6, 4, 6],
+                    data: [0, 1.8, 8.0, 9.3, 9.0, 7.0, 5.9, 5.5, 4.4, 5.7],
                     fill: true,
                     backgroundColor: 'rgb(255,219,121)',
                     hoverBackgroundColor: 'rgba(255,219,121,0.7)',
@@ -563,7 +563,7 @@
                 },
                 {
                     label: 'Kosher & Halal Combined Percent of Total',
-                    data: [ 0, 6, 20, 23, 25, 24, 24, 22, 19, 19],
+                    data: [ 0, 6, 19.7, 22.9, 24.6, 24.0, 24.4, 22.1, 19.3, 19.1],
                     type: 'line',
                     fill: false,
                     backgroundColor: 'rgb(233,67,67)',
@@ -598,7 +598,7 @@
                             return labels[shortlabels.indexOf(ttItem[0].label)];
                         },
                         label: function(tooltipItem) {
-                            let returnStr = tooltipItem.dataset.label + ': ' + tooltipItem.formattedValue;
+                            let returnStr = tooltipItem.dataset.label + ': ' + (parseFloat(tooltipItem.formattedValue)).toFixed(0);
                             return returnStr + '%';
                         }
                     }
