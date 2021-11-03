@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home | MMZ</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="dist/css/style.css" media="screen"/>
+    <style>
+        .chartSwitch:focus {
+            background: #60dc6d;
+        }
+
+        .chart-legend {
+            font-size: 12px;
+        }
+
+        .tableauPlaceholder {
+            display: none !important;
+        }
+
+        .tableauPlaceholder.show {
+            display: block !important;
+        }
+
+        @media screen and (max-width: 767px) {
+            h2 {
+                font-size: 30px;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            div.piechart1 {
+                max-width: 60%;
+            }
+
+            div.piechart2 {
+                max-width: 40%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="main-outercon">
+    <!--Begin header section-->
+    <header class="header-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--End header section-->
+
+    <!-- Begin banner section -->
+    <section class="banner-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <h1>Getting Food to All New Yorkers</h1>
+                    <div class="content-wrap">
+                        <img src="dist/images/image1.svg" alt="">
+                        <p>An Analysis of Kosher and Halal Meals Distributed Emergency Food Through
+                            <strong>GetFoodNYC</strong></p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="report-block">
+                        <div class="top-content">
+                        </div>
+                        <div class="button-wrap">
+                            <a href="./dist/pdf/MetCouncil–GotFoodDoc.pdf" target="_blank" class="download-btn">Download
+                                Report</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End banner section -->
+
+    <!-- Begin content section -->
+    <section class="content-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="fixed-sidebar">
+                        <div class="sidebar-widget js-sticky-widget">
+                            <h6>Jump to content</h6>
+                            <ul id="nav">
+                                <li class="current"><a href="#block1">Overview</a></li>
+                                <li><a href="#block2">Findings & Analysis</a></li>
+                                <li><a href="#block3">GetFoodNYC Meal Distribution</a></li>
+                                <li><a href="#block4">Discussion</a></li>
+                                <li><a href="#block5">Our Recommendations</a></li>
+                                <li><a href="#block6">Our Methodology</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <div class="content-block">
+                        <div class="contentrow" id="block1">
+                            <p> In March 2020, faced with an unprecedented surge in demand for emergency food due to the
+                                COVID-19 pandemic, New York City rapidly launched GetFoodNYC. This program delivered
+                                food to elderly, infirm, and other homebound New Yorkers who were most at risk of death
+                                and illness from COVID-19. Over time the program adapted to include culturally
+                                responsive food including kosher, halal, vegetarian, Latin, and pan-Asian options. All
+                                told from program’s inception through the end of September 2021, GetFoodNYC delivered
+                                <strong>128.7 million meals,</strong> of which nearly <strong>27 million were kosher or
+                                    halal.</strong></p>
+
+                            <p>The Mayors Office of Food Policy kept track of GetFoodNYC requests and shared the data
+                                publicly, allowing a first-time opportunity to examine city-wide demand for food by
+                                category (kosher, halal, vegetarian, Latin, pan-Asian, and non-specialty).</p>
+
+                            <p>As a certified enroller, leader in culturally responsive emergency food, and the largest
+                                kosher food network operator in the country, Met Council utilized this data to analyze
+                                kosher and halal meal distribution through GetFoodNYC.</p>
+                        </div>
+                        <div class="content-row" id="block2">
+                            <h2>Findings & Analysis</h2>
+                            <div class="content-inner">
+                                <div class="content-col">
+                                    <p>In March 2020, faced with an unprecedented surge in demand for emergency food as
+                                        the global COVID-19 pandemic spread and the economy collapsed, public officials
+                                        acted quickly by launching GetFoodNYC and other crisis response initiatives.
+                                        GetFoodNYC delivered food to elderly, infirm, and other homebound New Yorkers
+                                        who were most at risk of death and illness from COVID-19.</p>
+
+                                    <p>The program adapted swiftly to widespread demand, and over time introduced
+                                        alternatives that were responsive to cultural needs including kosher, halal,
+                                        vegetarian, Latin, and pan-Asian food options.</p>
+
+                                    <p>From the program’s inception through the end of September 2021, GetFoodNYC
+                                        delivered 128.7 million meals, helping feed vulnerable, food insecure New
+                                        Yorkers and enabling them to remain safe in their homes.1 The data tracked by
+                                        the program offer a first-time opportunity to examine citywide demand for food
+                                        by category (kosher, halal, vegetarian, Latin, pan-Asian, and non-specialty) as
+                                        well as by ZIP code. As a certified kosher and halal enroller for the program
+                                        and the largest kosher food network operator in the country, Met Council
+                                        analyzed and mapped the data to better understand the kosher- and
+                                        halal-observant communities served by the program. </p>
+                                </div>
+                                <div class="content-col">
+                                    <!-- <img src="dist/images/graph1.png" alt=""> -->
+                                    <div class="chart-block">
+                                        <div class="piechart1">
+                                            <canvas id="pieChart1" width="400" height="400"></canvas>
+                                        </div>
+                                        <div class="piechart2">
+                                            <canvas id="pieChart2" width="400" height="400"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="chart-legend">
+                                        Our analysis of the data found that <strong>one in five, or 21 percent of the
+                                        meals</strong> delivered over the life of the program were kosher or halal.
+                                    </div>
+
+                                    <div class="graph-card">
+                                        <h3><span>128.7</span> Million</h3>
+                                        <p>Total Meals Delivered</p>
+                                    </div>
+                                    <div class="graph-card">
+                                        <h3><span>27</span> Million</h3>
+                                        <p>Kosher & Halal Meals Delivered</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-inner">
+                                <div class="content-col">
+                                    <canvas id="myChart" width="400" height="400"></canvas>
+                                    <div class="chart-legend">
+                                        When we separate out kosher and halal percentages, we can see that both kosher
+                                        and halal trend at similar rates.
+                                    </div>
+                                </div>
+                                <div class="content-col">
+                                    <p>Our analysis of the data found that of the 128.7 million meals delivered, nearly
+                                        27 million were kosher (13.7 percent) or halal (7.2 percent). Demand for both
+                                        kosher and halal food was distributed across all five boroughs, with the highest
+                                        demand in Brooklyn, Queens, and the Bronx.2 Kosher meals were a significant
+                                        portion of all GetFoodNYC deliveries in many ZIP codes across the city. These
+                                        numbers should not be a surprise, as New York is home to the largest Jewish and
+                                        Muslim populations in the United States.</p>
+                                </div>
+                            </div>
+                            <div class="content-inner">
+                                <div class="">
+                                    <p>The need for kosher and halal food was in fact even higher, but some communities
+                                        of kosher- and halal-observant New Yorkers require elevated levels of
+                                        certification that could not be fulfilled within the existing 1 “GetFoodNYC
+                                        OVID-19 Emergency Food Distribution, Historical data about meal distribution,”
+                                        accessed October 14, 2021, <a href="#"><strong>https://www1.nyc.gov/assets/dsny/contact/services/COVID-19GetFoodNYCHistDist.shtml</strong></a>.
+                                        For the purposes of this report, all data and metrics related to GetFoodNYC as
+                                        reported by the City of New York will be referred to as either “meals
+                                        distributed” or “meals.” This is the term used by the City of New York on the
+                                        website (above) that hosts all GetFoodNYC data. We believe these to be
+                                        individual counts of meals that were part of distributions of food boxes or
+                                        similar packages that contained nine individual meals per box.2 Of the top ten
+                                        ZIP codes receiving kosher food and the top ten ZIP codes receiving halal food,
+                                        eight were in Brooklyn (of which two were on both the kosher and halal top ten
+                                        lists), five were in Queens, and five were in the Bronx. 1 parameters offered by
+                                        the GetFoodNYC program.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-row distribution" id="block3">
+                            <h2>GetFoodNYC Meal Distribution</h2>
+                            <p>Demand for both kosher and halal food was spread across all five boroughs, with the
+                                highest demand in Brooklyn, Queens, and the Bronx. (all GetFoodNYC data was collected at
+                                the zip code level, but our map allows you to layer various administrative boundaries
+                                over the zip code level data to better understand how this program affected your
+                                district or neighborhood) </p>
+                            <p>Click on the map or use the options above it to start exploring</p>
+                            <ul class="tab-links">
+                                <li class="active"><a data-map="viz1635951943492" href="#">NYC Zip Codes</a></li>
+                                <li><a data-map="viz1635952019954" href="#">NYC Neighborhoods</a></li>
+                                <li><a data-map="viz1635877361469" href="#">NYC Council Districts</a></li>
+                                <li><a data-map="viz1635877486770" href="#">NYS Assembly Districts</a></li>
+                                <li><a data-map="viz1635877548886" href="#">NYS Senate Districts</a></li>
+                                <li><a data-map="viz1635877767492" href="#">U.S Congressional Districts</a></li>
+                            </ul>
+                            <div class="map-block">
+                                <!-- NYC Zip Codes -->
+                                <div class='tableauPlaceholder show' id='viz1635951943492' style='position: relative'><noscript><a href='#'><img alt='ZC ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;ZC&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='GetFoodDashboardRevised&#47;ZC' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;ZC&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
+                                <!-- NYC Neighborhoods -->
+                                <div class='tableauPlaceholder' id='viz1635952019954' style='position: relative'><noscript><a href='#'><img alt='NTAs ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;NTAs&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='GetFoodDashboardRevised&#47;NTAs' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;NTAs&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>
+                                <!-- NYC Council Districts -->
+                                <div class='tableauPlaceholder' id='viz1635877361469' style='position: relative'><noscript><a href='#'><img alt='CC ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;CC&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='GetFoodDashboardRevised&#47;CC' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;CC&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>
+                                <!-- NYC Assembly Districts -->
+                                <div class='tableauPlaceholder' id='viz1635877486770' style='position: relative'><noscript><a href='#'><img alt='AD ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;AD&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='GetFoodDashboardRevised&#47;AD' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;AD&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>
+                                <!-- NYC Senate Districts -->
+                                <div class='tableauPlaceholder' id='viz1635877548886' style='position: relative'><noscript><a href='#'><img alt='SD ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;SD&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='GetFoodDashboardRevised&#47;SD' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;SD&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>
+                                <!-- NYC Congressional Districts -->
+                                <div class='tableauPlaceholder' id='viz1635877767492' style='position: relative'><noscript><a href='#'><img alt='CD ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;Dashboard14&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='GetFoodDashboardRevised&#47;Dashboard14' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;Dashboard14&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>
+
+                                <script type='text/javascript'>
+                                    const tabClick = (el) => {
+                                        el.preventDefault();
+                                        document.querySelector('.tab-links li[class=active]').classList.remove('active');
+                                        el.target.parentElement.classList.add('active');
+                                        document.querySelector('.map-block div.tableauPlaceholder.show').classList.remove('show')
+                                        document.querySelector(`.map-block div.tableauPlaceholder#${el.target.dataset.map}`).classList.add('show');
+
+                                        return false;
+                                    };
+                                    const initTableau = (divElement) => {
+                                        var vizElement = divElement.getElementsByTagName('object')[0];
+                                        if (divElement.offsetWidth > 800) {
+                                            vizElement.style.width = '100%';
+                                            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                                        } else if (divElement.offsetWidth > 500) {
+                                            vizElement.style.width = '100%';
+                                            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                                        } else {
+                                            vizElement.style.width = '100%';
+                                            vizElement.style.height = '877px';
+                                        }
+                                        var scriptElement = document.createElement('script');
+                                        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                                        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                                    }
+                                    const tabs = document.querySelectorAll('.tab-links li a');
+                                    for (const tab of tabs) {
+                                        tab.addEventListener('click', tabClick);
+                                        initTableau(document.getElementById(tab.dataset.map));
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                        <div class="content-row breakdown" id="block4">
+                            <h2>Discussion</h2>
+                            <h6>Meals delivered by GetFoodNYC (March 2020 - December 2020)</h6>
+                            <div class="content-inner">
+                                <div class="content-col">
+                                    <div id="chart3-wrapper">
+                                        <canvas id="bar-line" width="400" height="400"></canvas>
+                                        <div class="chart-legend">
+                                            In the early months of the pandemic, from March 2020 through December 2020,
+                                            June was the month with the highest demand for GetFoodNYC. Kosher and halal
+                                            meals comprised <strong>23 percent</strong> of the meals distributed that
+                                            month. While the total number of meals distributed starts to decline after
+                                            June 2020, the demand for kosher and halal meals held steady and even rose
+                                            slightly through September 2020.
+                                        </div>
+                                    </div>
+                                    <div class="button-block">
+                                        <a href="#" id="chartSwitch1" class="btn-default chartSwitch">2020 Monthly
+                                            Meals</a>
+                                    </div>
+                                </div>
+                                <div class="content-col">
+                                    <p>Aside from these general patterns, it is essential to understand the broad range
+                                        of cultural differences and specific needs of neighborhoods across the City when
+                                        providing emergency food to communities with specific dietary requirements such
+                                        a kosher and halal. </p>
+                                    <p>These numbers could underestimate the need for kosher and halal food, since some
+                                        communities of kosher- and halal-observant New Yorkers could not participate in
+                                        the program because they require elevated levels of certification that
+                                        GetFoodNYC did not meet. Moreover, delivery of food on Saturdays (the Jewish
+                                        Sabbath) or Jewish holidays caused some kosher-observant households to withdraw
+                                        from the program and others not to enroll at all. For instance, the GetFoodNYC
+                                        data shows very low program uptake in South Williamsburg (zip code) even though
+                                        there is a large population of low-income ultra-Orthodox households in this
+                                        neighborhood.</p>
+                                    <p>Nevertheless, the City’s efforts to make sure no one went hungry likely enabled
+                                        many kosher- and halal-observant individuals to receive emergency food for the
+                                        first time. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-row" id="block5">
+                            <h2>Our Recommendations</h2>
+                            <p>Although <strong>one in five New Yorkers</strong> enrolled in the program requested
+                                kosher or halal food, the city’s emergency feeding system has a very limited number of
+                                providers with the expertise and experience to provide food that adheres to religious
+                                dietary requirements and is culturally appropriate. </p>
+                            <p>We must ensure that New York’s emergency feeding system recognizes and addresses the
+                                diverse dietary needs and requirements of all food insecure New Yorkers and is prepared
+                                for the next crisis. Based on our analysis of the data from GetFoodNYC and our
+                                experience as an emergency food provider, Met Council makes the following
+                                recommendations:</p>
+                            <div class="text-box">
+                                <h5>Funding Solutions</h5>
+                                <ol>
+                                    <li><strong><span>1.</span>Increase emergency food funding to reflect the widespread
+                                        need for kosher and halal food.</strong>
+                                        <ol class="lower">
+                                            <li>Increase acquisition of kosher- and halal-certified food to at least 20%
+                                                of all City-funded emergency food.
+                                            </li>
+                                            <li>Increase funding for New York State programs Nourish New York, Hunger
+                                                Prevention and Nutrition Assistance Program (HPNAP) and The Emergency
+                                                Food and Shelter Program (EFSP).
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li><strong><span>2.</span>Enable more flexibility with food funding so that food
+                                        pantry operators can meet the specific dietary requirements of their
+                                        communities.</strong>
+                                        <ol class="lower">
+                                            <li>Provide funding as lines of credit or cash-in-hand, and allow funding to
+                                                be used for operating expenses, including rent and salaries.
+                                            </li>
+                                            <li>Streamline the City’s Emergency Food Assistance Program (EFAP) by
+                                                removing its procurement process from the NYC Department of Citywide
+                                                Administrative Services (DCAS) to enable purchase of a wider array of
+                                                culturally appropriate foods.
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="text-box">
+                                <h5>Policy Solutions</h5>
+                                <ol>
+                                    <li><strong><span>3.</span>Ensure awareness and sensitivity to kosher and halal
+                                        needs in policy-making bodies.</strong>
+                                        <ol class="lower">
+                                            <li>Create a division of kosher and halal food within the New York State
+                                                Office of General Services.
+                                            </li>
+                                            <li>Expand the Mayor’s Office of Food Policy’s Governance Initiatives to
+                                                include kosher and halal foods and appoint a Deputy Director to oversee
+                                                the initiative.
+                                            </li>
+                                            <li>Expand the FeedNYC Policy Committee on New York Hunger Resources to
+                                                include providers with kosher and halal expertise.
+                                            </li>
+                                            <li>Bring in relevant community-based organizations (CBOs) to City tables
+                                                during initial planning sessions of new programs, even during a crisis.
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li><strong><span>4.</span>Incorporate cultural competency into NYC and State
+                                        Request for Proposals (RFP) requirements. </strong>
+                                        <ol class="lower">
+                                            <li>The long-awaited request for proposals for a new EFAP contract is an
+                                                opportunity to incorporate a requirement that programs offer culturally
+                                                appropriate foods.
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li><strong><span>5.</span>Increase and Improve Data Collection.</strong>
+                                        <ol class="lower">
+                                            <li>Have the New York State Office of General Services Division of Food
+                                                Distribution track and publish data on the distribution of kosher and
+                                                halal food to food banks across the State.
+                                            </li>
+                                            <li>Continue New York City’s collection and sharing of disaggregated data on
+                                                emergency food program requests and program utilization and solicit
+                                                public input about data collection at a new program’s inception.
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li><strong><span>6.</span>Increase access to Supplemental Nutrition Assistance
+                                        Program (SNAP) benefits.</strong>
+                                        <ol class="lower">
+                                            <li>Support changes to SNAP that broaden eligibility, reduce barriers to
+                                                enrollment (such as by extending the waiver that allows clients to apply
+                                                by telephone and for complete applications to be considered without an
+                                                interview), and increase SNAP benefit levels.
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="text-box">
+                                <h5>Legislative Solutions</h5>
+                                <ol>
+                                    <li><strong><span>7.</span>Amend Local Law 52/2011 (which establishes reporting
+                                        requirements for many food-related initiatives) to include data specific to
+                                        kosher and halal food.</strong></li>
+                                    <li><strong><span>8.</span>Amend Local Law 41/2020 to expand the jurisdiction of the
+                                        Mayor’s Office of Food Policy to address food insecurity in the kosher- and
+                                        halal-observant communities.</strong></li>
+                                    <li><strong><span>9.</span>Enact a State law requiring the creation of an office of
+                                        kosher and halal within the New York State Office of General Services Division
+                                        of Food Distribution and require it to track and publish data on the
+                                        distribution of emergency kosher and halal food to food banks across the State.</strong>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="content-row methodblk" id="block6">
+                            <h2>Our Methodology</h2>
+                            <p>For the purposes of this analysis, we looked at this data in several different ways.
+                                First, we segmented the data by month covering every month from April of 2020, the first
+                                month in which culturally responsive meals were made available, to July of 2021, the
+                                latest full month of publicly available data at the time of our analysis. Once broken
+                                into individual months we separated out the total monthly requests for all meals, kosher
+                                meals, and halal meals by zip code. With these numbers in hand we looked at each month
+                                in three different ways: </p>
+                            <ul class="method-list">
+                                <li>
+                                    <img src="dist/images/icon1.svg" alt="icon">
+                                    <p>Raw numbers reported by the City of New York</p>
+                                </li>
+                                <li>
+                                    <img src="dist/images/icon2.svg" alt="icon">
+                                    <p>Percentages hand calculated on a monthly basis by dividing either kosher or halal
+                                        meal distribution by the corresponding monthly total requests</p>
+                                </li>
+                                <li>
+                                    <img src="dist/images/icon4.svg" alt="icon">
+                                    <p>Once we had this information, we were able to develop a deeper understanding of
+                                        where the likely kosher- and halal-observant populations are located within the
+                                        City, particularly those facing food insecurity. </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End content section -->
+
+    <!--Begin Footer section-->
+    <footer class="footer-container">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-5">
+                        <div class="report-block">
+                            <div class="top-content">
+                            </div>
+                            <div class="button-wrap">
+                                <a href="./dist/pdf/MetCouncil–GotFoodDoc.pdf" target="_blank" class="download-btn">Download
+                                    Report</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <div class="footer-content">
+                            <h2>Have Questions? <span>Please Contact Us.</span></h2>
+                            <a href="mailto:info@metcouncil.org" class="btn-default white">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p><img src="dist/images/image2.svg" alt=""> <strong>Getting Food to All New Yorkers:</strong>
+                            An Analysis of Kosher and Halal Meals Distributed for Emergency Food Through GetFoodNYC \
+                            2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!--End Footer section-->
+</div>
+<!-- Le javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="dist/js/vendor/jquery-3.5.0.min.js"></script>
+<script src="dist/js/vendor/jquery-migrate-3.0.1.min.js"></script>
+<script src="dist/js/vendor/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0-rc.1/chartjs-plugin-datalabels.js" ></script>
+<script src="dist/js/vendor/jquery.nav.js"></script>
+<script src="dist/js/vendor/sticksy.min.js"></script>
+<script src="dist/js/main.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        $('#chartSwitch1').on("click", function (e) {
+            e.preventDefault();
+            $('#chart3-wrapper').show();
+            $('#myNewChart').hide();
+            $(this).removeClass('border');
+            $('#chartSwitch2').addClass('border');
+        });
+        $('#chartSwitch2').on("click", function (e) {
+            e.preventDefault();
+            $('#chart3-wrapper').hide();
+            $('#myNewChart').show();
+            $(this).removeClass('border');
+            $('#chartSwitch1').addClass('border');
+        });
+    });
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'],
+            datasets: [
+                {
+                    label: 'Kosher Percent of Total',
+                    data: [0, 4.2, 11.7, 13.6, 15.6, 16.9, 18.5, 16.6, 14.9, 13.5],
+                    fill: true,
+                    backgroundColor: 'rgb(132,229,162)',
+                    hoverBackgroundColor: 'rgba(132,229,162,0.7)',
+                    borderWidth: 0,
+                    order: 1,
+                    pointRadius: 1,
+                },
+                {
+                    label: 'Halal Percent of Total',
+                    data: [0, 1.8, 8.0, 9.3, 9.0, 7.0, 5.9, 5.5, 4.4, 5.7],
+                    fill: true,
+                    backgroundColor: 'rgb(255,219,121)',
+                    hoverBackgroundColor: 'rgba(255,219,121,0.7)',
+                    borderWidth: 0,
+                    order: 2,
+                    pointRadius: 1,
+                },
+                {
+                    label: 'Kosher & Halal Combined Percent of Total',
+                    data: [ 0, 6, 19.7, 22.9, 24.6, 24.0, 24.4, 22.1, 19.3, 19.1],
+                    type: 'line',
+                    fill: false,
+                    backgroundColor: 'rgb(233,67,67)',
+                    hoverBackgroundColor: 'rgba(233,67,67,0.7)',
+                    borderColor: 'rgb(233,67,67)',
+                    borderWidth: 2,
+                    order: 0,
+                    yAxisID: 'y1',
+                    pointRadius: 1,
+                    stack: false,
+                },
+            ]
+        },
+        options: {
+            responsive: true,
+            interaction: {
+                mode: 'nearest',
+                axis: 'x',
+                intersect: false
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Kosher and Halal Percent of Total GetFood NYC Meals'
+                },
+                tooltip: {
+                    enabled: true,
+                    callbacks: {
+                        title: (ttItem) => {
+                            let shortlabels = ['Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+                            let labels = ['March', 'April', 'May', 'June', 'July', 'August.', 'September', 'October.', 'November', 'December'];
+                            return labels[shortlabels.indexOf(ttItem[0].label)];
+                        },
+                        label: function(tooltipItem) {
+                            let returnStr = tooltipItem.dataset.label + ': ' + (parseFloat(tooltipItem.formattedValue)).toFixed(0);
+                            return returnStr + '%';
+                        }
+                    }
+                },
+                legend: {
+                    title: {
+                        display: false,
+                        text: 'Legend',
+                    },
+                    position: 'bottom',
+                },
+                datalabels: {
+                    formatter: (value, dnct1) => {
+                        let sum = 0;
+                        let dataArr = dnct1.chart.data.datasets[0].data;
+                        console.log(dnct1);
+                        let percentage = (value).toFixed(0)+'%';
+                        if(dnct1.datasetIndex !== 2) percentage = '';
+                        if(dnct1.dataIndex === 0) percentage = '';
+                        return percentage;
+                    },
+                    align: (ctx) => {
+                        const positions = [0,45,45,45,90,90,90,120,100,120];
+                        return positions[ctx.dataIndex];
+                    },
+                    offset: 10,
+                    color: '#000'
+                },
+            },
+            scales: {
+                x: {
+                    display: true,
+                    title: {
+                        display: true,
+                        text: '2020'
+                    },
+                    grid: {
+                        drawTicks: false
+                    },
+                    ticks: {
+                        font: {
+                            size: 10,
+                        },
+                        autoSkip: false,
+                        maxRotation: 0,
+                        minRotation: 0,
+                    },
+                },
+                y: {
+                    beginAtZero: true,
+                    stacked: true,
+                    suggestedMin: 0,
+                    suggestedMax: 25,
+                    min: 0,
+                    max: 25,
+                    scaleLabel: {
+                        show: true
+                    },
+                    grid: {
+                        drawTicks: false
+                    },
+                    ticks: {
+                        font: {
+                            size: 10,
+                        },
+                        callback: function (value, index, values) {
+                            return value + '%';
+                        }
+                    }
+                },
+                y1: {
+                    display: false,
+                }
+            },
+        },
+        plugins: [ChartDataLabels]
+    });
+
+    /*const ctx2 = document.getElementById('myChart2').getContext('2d');
+    const myChart2 = new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: ['', 'May 2020', 'July 2020', 'Sep. 2020', 'Nov. 2020', 'Jan. 2021', 'March 2021', 'May 2021', 'July 2021', 'Sept. 2021'],
+            datasets: [
+                {
+                    label: 'Growth Rate: Kosher Meals',
+                    data: [, 250, 50, -20, -50, -40, -30, -35, 15, -10, -25, 30, -5],
+                    fill: false,
+                    backgroundColor: 'rgb(132,229,162)',
+                    borderColor: 'rgb(132,229,162)',
+                    borderWidth: 3,
+                },
+                {
+                    label: 'Growth Rate: Halal Meals',
+                    data: [, 255, 48, -5, -30, -40, -46, -35, 5, -15, -5, 0, -25],
+                    fill: false,
+                    backgroundColor: 'rgb(255,219,121)',
+                    borderColor: 'rgb(255,219,121)',
+                    borderWidth: 3,
+                },
+            ]
+        },
+        options: {
+            responsive: true,
+            elements: {
+                point: {
+                    radius: 0
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'GetFood NYC Monthly Growth Rate'
+                },
+                legend: {
+                    title: {
+                        display: true,
+                        text: 'Legend',
+                    },
+                    position: 'bottom',
+                }
+            },
+            scales: {
+                x: {
+                    display: true,
+                    title: {
+                        display: true,
+                        text: '2020'
+                    },
+                    grid: {
+                        drawTicks: false
+                    },
+                    ticks: {
+                        font: {
+                            size: 7,
+                        },
+                        autoSkip: false,
+                        maxRotation: 0,
+                        minRotation: 0,
+                    },
+                },
+                y: {
+                    beginAtZero: true,
+                    scaleLabel: {
+                        show: true
+                    },
+                    grid: {
+                        drawTicks: false
+                    },
+                    ticks: {
+                        font: {
+                            size: 7,
+                        },
+                        callback: function (value, index, values) {
+                            return value + '%';
+                        }
+                    }
+                }
+            },
+        }
+    });*/
+
+    const ctx3 = document.getElementById('bar-line').getContext('2d');
+    const barLine = new Chart(ctx3, {
+        type: 'bar',
+        data: {
+            labels: ['Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'],
+            datasets: [
+                {
+                    label: 'Total Meals',
+                    data: [ 172287, 6696225, 22659975, 26914095, 21967611, 12526794, 8231702, 5125707, 3668352, 2996163],
+                    backgroundColor: 'rgb(96,220,108)',
+                    hoverBackgroundColor: 'rgba(96,220,108,0.7)',
+                    borderWidth: 0,
+                    order: 2,
+                    barThickness: 25,
+                    yAxisID: 'y1',
+                },
+                {
+                    label: 'Kosher & Halal Combined Percent of Total',
+                    data: [ 0, 6, 20, 23, 25, 24, 24, 22, 19, 19],
+                    type: 'line',
+                    fill: false,
+                    backgroundColor: 'rgb(233,67,67)',
+                    hoverBackgroundColor: 'rgba(233,67,67,0.7)',
+                    borderColor: 'rgb(233,67,67)',
+                    borderWidth: 2,
+                    order: 1,
+                    yAxisID: 'y',
+                    pointRadius: 1,
+                }
+            ],
+        },
+        options: {
+            responsive: true,
+            interaction: {
+                mode: 'index',
+                intersect: false,
+            },
+            stacked: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'GetFood NYC 2020 Meals by Month'
+                },
+                tooltip: {
+                    enabled: true,
+                    callbacks: {
+                        title: (ttItem) => {
+                            let shortlabels = ['Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+                            let labels = ['March', 'April', 'May', 'June', 'July', 'August.', 'September', 'October.', 'November', 'December'];
+                            return labels[shortlabels.indexOf(ttItem[0].label)];
+                        },
+                        label: function(tooltipItem) {
+                            let returnStr = tooltipItem.dataset.label + ': ' + tooltipItem.formattedValue;
+                            if(tooltipItem.datasetIndex===1) returnStr += '%';
+                            return returnStr;
+                        }
+                    }
+                },
+                legend: {
+                    title: {
+                        display: true,
+                        text: 'Legend',
+                    },
+                    position: 'bottom',
+                }
+            },
+            scales: {
+                x: {
+                    display: true,
+                    title: {
+                        display: true,
+                        text: '2020'
+                    },
+                    grid: {
+                        drawTicks: false,
+                        drawOnChartArea: false
+                    },
+                    ticks: {
+                        font: {
+                            size: 10,
+                        },
+                        autoSkip: false,
+                        maxRotation: 0,
+                        minRotation: 0,
+                    },
+                },
+                y: {
+                    beginAtZero: true,
+                    position: 'left',
+                    scaleLabel: {
+                        show: true
+                    },
+                    grid: {
+                        drawTicks: false,
+                    },
+                    title: {
+                        display: true,
+                        text: 'Kosher & Halal Combined Percent of Total'
+                    },
+                    suggestedMin: 0,
+                    suggestedMax: 100,
+                    ticks: {
+                        font: {
+                            size: 10,
+                        },
+                        callback: function (value, index, values) {
+                            return value + '%';
+                        },
+                    }
+                },
+                y1: {
+                    stacked: false,
+                    display: true,
+                    position: 'right',
+                    grid: {
+                        drawTicks: false,
+                        drawOnChartArea: false, // only want the grid lines for one axis to show up
+                    },
+                    title: {
+                        display: true,
+                        text: 'Total Meals'
+                    },
+                    ticks: {
+                        font: {
+                            size: 10,
+                        },
+                        callback: function (value, index, values) {
+                            return value/1000000 + 'M';
+                        }
+                    }
+                },
+            },
+        }
+    });
+
+
+    const ctx4 = document.getElementById('pieChart1').getContext('2d');
+    const pieChart1 = new Chart(ctx4, {
+        type: 'pie',
+        data: {
+            labels: ['Combined Kosher and Halal', 'Other Meals'],
+            datasets: [
+                {
+                    label: ['Combined Kosher and Halal', 'Other Meals'],
+                    //data: [21, 79],
+                    data: [26870190, 101810363],
+                    fill: true,
+                    backgroundColor: ['rgb(255,197,63)', 'rgb(46,213,110)'],
+                    hoverBackgroundColor: ['rgba(255,197,63,0.7)', 'rgba(46,213,110,0.7)'],
+                    hoverOffset: 4,
+                    borderWidth: 0,
+                },
+            ],
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: false,
+                },
+                tooltip: {
+                    enabled: true,
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.label || '';
+                            return label;
+                        },
+                        footer: (ttItem) => {
+                            let sum = 0;
+                            let label = ttItem[0].dataset.label || '';
+                            //console.log(ttItem);
+                            let dataArr = ttItem[0].dataset.data;
+                            dataArr.map(data => {
+                                sum += Number(data);
+                            });
+
+                            let percentage = (ttItem[0].parsed * 100 / sum).toFixed(2) + '%';
+                            let number = ttItem[0].parsed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                            let footerStr = `% of Total Meals: ${percentage} \n`;
+                            footerStr += `Number of Meals: ${number}`;
+                            return footerStr;
+                        }
+                    }
+                },
+                datalabels: {
+                    formatter: (value, dnct1) => {
+                        let sum = 0;
+                        let dataArr = dnct1.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(0)+'%';
+                        return percentage;
+                    },
+                    color: '#000'
+                },
+                legend: {
+                    title: {
+                        display: false,
+                        text: 'Legend',
+                    },
+                    position: 'bottom',
+                },
+            },
+        },
+        plugins: [ChartDataLabels]
+    });
+
+    const ctx5 = document.getElementById('pieChart2').getContext('2d');
+    const pieChart2 = new Chart(ctx5, {
+        type: 'pie',
+        data: {
+            labels: ['Halal', 'Kosher'],
+            datasets: [
+                {
+                    label: ['Halal', 'Kosher'],
+                    data: [9226680, 17643510],
+                    fill: true,
+                    backgroundColor: ['rgb(232,67,67)', 'rgb(255,152,31)'],
+                    hoverBackgroundColor: ['rgba(232,67,67,0.7)', 'rgba(255,152,31,0.7)'],
+                    borderWidth: 0,
+                },
+            ],
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: false,
+                },
+                tooltip: {
+                    enabled: true,
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.label || '';
+                            return label;
+                        },
+                        footer: (ttItem) => {
+                            let sum = 0;
+                            let label = ttItem[0].dataset.label || '';
+                            //console.log(ttItem);
+                            let dataArr = ttItem[0].dataset.data;
+                            dataArr.map(data => {
+                                sum += Number(data);
+                            });
+
+                            let number = ttItem[0].parsed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                            let footerStr = `Meals: ${number}`;
+                            return footerStr;
+                        }
+                    }
+                },
+                datalabels: {
+                    formatter: (value, dnct1) => {
+                        let sum = 0;
+                        let dataArr = dnct1.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(0)+'%';
+                        return percentage;
+                    },
+                    color: '#000'
+                },
+                legend: {
+                    title: {
+                        display: false,
+                        text: 'Legend',
+                    },
+                    position: 'bottom',
+                },
+            },
+        },
+        plugins: [ChartDataLabels]
+    });
+</script>
+</body>
+</html>
