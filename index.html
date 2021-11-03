@@ -324,7 +324,7 @@
                             <div class="content-inner">
                                 <div class="content-col">
                                     <div id="chart3-wrapper">
-                                        <canvas id="myChart3" width="400" height="400"></canvas>
+                                        <canvas id="bar-line" width="400" height="400"></canvas>
                                         <div class="chart-legend">
                                             In the early months of the pandemic, from March 2020 through December 2020,
                                             June was the month with the highest demand for GetFoodNYC. Kosher and halal
@@ -739,16 +739,17 @@
         }
     });*/
 
-    const ctx3 = document.getElementById('myChart3').getContext('2d');
-    const myChart3 = new Chart(ctx3, {
+    const ctx3 = document.getElementById('bar-line').getContext('2d');
+    const barLine = new Chart(ctx3, {
         type: 'bar',
         data: {
             labels: ['', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.', 'Jan.'],
             datasets: [
                 {
                     label: 'Total Meals',
-                    data: [, 0.5, 7, 22, 27, 21.7, 13, 7.8, 5.5, 4, 3],
+                    data: [ 0.5, 7, 22, 27, 21.7, 13, 7.8, 5.5, 4, 3],
                     backgroundColor: 'rgb(96,220,108)',
+                    hoverBackgroundColor: 'rgba(96,220,108,0.7)',
                     borderWidth: 0,
                     order: 2,
                     barThickness: 25,
@@ -756,7 +757,7 @@
                 },
                 {
                     label: 'Kosher & Halal Combined Percent of Total',
-                    data: [, 0, 6, 20, 23, 25, 24, 26, 22, 19, 18],
+                    data: [ 0, 6, 20, 23, 25, 24, 26, 22, 19, 18],
                     type: 'line',
                     fill: false,
                     backgroundColor: 'rgb(233,67,67)',
