@@ -556,6 +556,7 @@
 <script src="dist/js/vendor/jquery-3.5.0.min.js"></script>
 <script src="dist/js/vendor/jquery-migrate-3.0.1.min.js"></script>
 <script src="dist/js/vendor/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0-rc.1/chartjs-plugin-datalabels.js" ></script>
 <script src="dist/js/vendor/jquery.nav.js"></script>
 <script src="dist/js/vendor/sticksy.min.js"></script>
 <script src="dist/js/main.js"></script>
@@ -743,7 +744,7 @@
     const barLine = new Chart(ctx3, {
         type: 'bar',
         data: {
-            labels: ['', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.', 'Jan.'],
+            labels: ['March', 'April', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.', 'Jan.'],
             datasets: [
                 {
                     label: 'Total Meals',
@@ -776,6 +777,14 @@
                 intersect: false,
             },
             stacked: false,
+            tooltips: {
+                mode: 'label',
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        return data['datasets'][0]['data'][tooltipItem['index']] + '%';
+                    }
+                }
+            },
             plugins: {
                 title: {
                     display: true,
@@ -866,8 +875,9 @@
             labels: ['Combined Kosher and Halal', 'Other Meals'],
             datasets: [
                 {
-                    label: '',
-                    data: [21, 79],
+                    label: ['Combined Kosher and Halal', 'Other Meals'],
+                    //data: [21, 79],
+                    data: [26870190, 101810363],
                     fill: true,
                     backgroundColor: ['rgb(255,197,63)', 'rgb(46,213,110)'],
                     hoverBackgroundColor: ['rgba(255,197,63,0.7)', 'rgba(46,213,110,0.7)'],
@@ -882,6 +892,42 @@
                 title: {
                     display: false,
                 },
+                tooltip: {
+                    enabled: true,
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.label || '';
+                            return label;
+                        },
+                        footer: (ttItem) => {
+                            let sum = 0;
+                            let label = ttItem[0].dataset.label || '';
+                            //console.log(ttItem);
+                            let dataArr = ttItem[0].dataset.data;
+                            dataArr.map(data => {
+                                sum += Number(data);
+                            });
+
+                            let percentage = (ttItem[0].parsed * 100 / sum).toFixed(2) + '%';
+                            let number = ttItem[0].parsed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                            let footerStr = `% of Total Meals: ${percentage} \n`;
+                            footerStr += `Number of Meals: ${number}`;
+                            return footerStr;
+                        }
+                    }
+                },
+                datalabels: {
+                    formatter: (value, dnct1) => {
+                        let sum = 0;
+                        let dataArr = dnct1.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(2)+'%';
+                        return percentage;
+                    },
+                    color: '#000'
+                },
                 legend: {
                     title: {
                         display: false,
@@ -890,17 +936,18 @@
                     position: 'bottom',
                 },
             },
-        }
+        },
+        plugins: [ChartDataLabels]
     });
 
     const ctx5 = document.getElementById('pieChart2').getContext('2d');
     const pieChart2 = new Chart(ctx5, {
         type: 'pie',
         data: {
-            labels: ['Halal 9,226,680 Meals', 'Kosher 17,643,510 Meals'],
+            labels: ['Halal', 'Kosher'],
             datasets: [
                 {
-                    label: '',
+                    label: ['Halal', 'Kosher'],
                     data: [9226680, 17643510],
                     fill: true,
                     backgroundColor: ['rgb(232,67,67)', 'rgb(255,152,31)'],
@@ -915,6 +962,40 @@
                 title: {
                     display: false,
                 },
+                tooltip: {
+                    enabled: true,
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.label || '';
+                            return label;
+                        },
+                        footer: (ttItem) => {
+                            let sum = 0;
+                            let label = ttItem[0].dataset.label || '';
+                            //console.log(ttItem);
+                            let dataArr = ttItem[0].dataset.data;
+                            dataArr.map(data => {
+                                sum += Number(data);
+                            });
+
+                            let number = ttItem[0].parsed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                            let footerStr = `Meals: ${number}`;
+                            return footerStr;
+                        }
+                    }
+                },
+                datalabels: {
+                    formatter: (value, dnct1) => {
+                        let sum = 0;
+                        let dataArr = dnct1.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(2)+'%';
+                        return percentage;
+                    },
+                    color: '#000'
+                },
                 legend: {
                     title: {
                         display: false,
@@ -923,7 +1004,8 @@
                     position: 'bottom',
                 },
             },
-        }
+        },
+        plugins: [ChartDataLabels]
     });
 </script>
 </body>
