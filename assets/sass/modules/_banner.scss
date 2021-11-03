@@ -116,7 +116,7 @@
 	background-image: url("/dist/images/cover.png");
 	background-size: cover;
 	@media only screen and (min-width: 1200px) and (max-width: 1499px){ 
-		min-height: 420px;
+		min-height: 470px;
 	}
 	@media #{$tablet-landscape} {
 		min-height: 400px;
@@ -125,7 +125,7 @@
 		min-height: 345px;
 	}
 	@media #{$mobile-landscape} {
-		min-height: 300px;
+		min-height: 445px;
 	}
 }
 .button-wrap {
