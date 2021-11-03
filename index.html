@@ -18,14 +18,11 @@
 
         .chart-legend {
             font-size: 12px;
-        }
-
-        .tableauPlaceholder {
-            display: none !important;
-        }
-
-        .tableauPlaceholder.show {
-            display: block !important;
+            text-align: center;
+            padding-bottom: 5px;
+            font-family: 'Gotham Bold';
+            color: #656665;
+            letter-spacing: -0.5px;
         }
 
         @media screen and (max-width: 767px) {
@@ -149,6 +146,9 @@
                                 </div>
                                 <div class="content-col">
                                     <!-- <img src="dist/images/graph1.png" alt=""> -->
+                                    <div class="chart-legend">
+                                        GetFood NYC Meals Distributed
+                                    </div>
                                     <div class="chart-block">
                                         <div class="piechart1">
                                             <canvas id="pieChart1" width="400" height="400"></canvas>
@@ -161,6 +161,9 @@
                             </div>
                             <div class="content-inner">
                                 <div class="content-col">
+                                    <div class="chart-legend">
+                                        GetFood NYC 2020 Meals by Month
+                                    </div>
                                     <canvas id="bar-line" width="400" height="400"></canvas>
                                 </div>
                                 <div class="content-col center-col">
@@ -559,7 +562,6 @@
                     formatter: (value, dnct1) => {
                         let sum = 0;
                         let dataArr = dnct1.chart.data.datasets[0].data;
-                        console.log(dnct1);
                         let percentage = (value).toFixed(0)+'%';
                         if(dnct1.datasetIndex !== 2) percentage = '';
                         if(dnct1.dataIndex === 0) percentage = '';
@@ -876,7 +878,6 @@
                         footer: (ttItem) => {
                             let sum = 0;
                             let label = ttItem[0].dataset.label || '';
-                            //console.log(ttItem);
                             let dataArr = ttItem[0].dataset.data;
                             dataArr.map(data => {
                                 sum += Number(data);
@@ -946,7 +947,6 @@
                         footer: (ttItem) => {
                             let sum = 0;
                             let label = ttItem[0].dataset.label || '';
-                            //console.log(ttItem);
                             let dataArr = ttItem[0].dataset.data;
                             dataArr.map(data => {
                                 sum += Number(data);
