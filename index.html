@@ -744,7 +744,7 @@
     const barLine = new Chart(ctx3, {
         type: 'bar',
         data: {
-            labels: ['Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.', 'Jan.'],
+            labels: ['Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'],
             datasets: [
                 {
                     label: 'Total Meals',
@@ -786,8 +786,8 @@
                     enabled: true,
                     callbacks: {
                         title: (ttItem) => {
-                            let shortlabels = ['Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.', 'Jan.'];
-                            let labels = ['March', 'April', 'May', 'June', 'July', 'August.', 'September', 'October.', 'November', 'December', 'January'];
+                            let shortlabels = ['Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+                            let labels = ['March', 'April', 'May', 'June', 'July', 'August.', 'September', 'October.', 'November', 'December'];
                             return labels[shortlabels.indexOf(ttItem[0].label)];
                         },
                         label: function(tooltipItem) {
