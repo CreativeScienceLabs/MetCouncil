@@ -22,7 +22,7 @@
             padding-bottom: 5px;
             font-family: 'Gotham Bold';
             color: #656665;
-            letter-spacing: -0.5px;
+            letter-spacing: -0.2px;
         }
 
         .tableauPlaceholder {
@@ -171,9 +171,6 @@
                             </div>
                             <div class="content-inner">
                                 <div class="content-col">
-                                    <div class="chart-legend">
-                                        GetFood NYC 2020 Meals by Month
-                                    </div>
                                     <canvas id="bar-line" width="400" height="400"></canvas>
                                 </div>
                                 <div class="content-col center-col">
@@ -546,7 +543,10 @@
             plugins: {
                 title: {
                     display: true,
-                    text: 'Kosher and Halal Percent of Total GetFood NYC Meals'
+                    text: 'Kosher and Halal Percent of Total GetFood NYC Meals',
+                    font: {
+                        size: 12,
+                    },
                 },
                 tooltip: {
                     enabled: true,
@@ -598,7 +598,7 @@
                     },
                     ticks: {
                         font: {
-                            size: 10,
+                            size: 11,
                         },
                         autoSkip: false,
                         maxRotation: 0,
@@ -620,7 +620,7 @@
                     },
                     ticks: {
                         font: {
-                            size: 10,
+                            size: 11,
                         },
                         callback: function (value, index, values) {
                             return value + '%';
@@ -760,7 +760,10 @@
             plugins: {
                 title: {
                     display: true,
-                    text: 'GetFood NYC 2020 Meals by Month'
+                    text: 'GetFood NYC 2020 Meals by Month',
+                    font: {
+                        size: 12,
+                    },
                 },
                 tooltip: {
                     enabled: true,
@@ -798,7 +801,7 @@
                     },
                     ticks: {
                         font: {
-                            size: 10,
+                            size: 11,
                         },
                         autoSkip: false,
                         maxRotation: 0,
@@ -822,7 +825,7 @@
                     suggestedMax: 100,
                     ticks: {
                         font: {
-                            size: 10,
+                            size: 11,
                         },
                         callback: function (value, index, values) {
                             return value + '%';
@@ -843,7 +846,7 @@
                     },
                     ticks: {
                         font: {
-                            size: 10,
+                            size: 11,
                         },
                         callback: function (value, index, values) {
                             return value/1000000 + 'M';
