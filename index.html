@@ -213,48 +213,6 @@
                             </div>
                         </div>
                         <div class="content-row distribution" id="block3">
-                            <!-- <div class="map-block">
-                                <div class='tableauPlaceholder' id='viz1635167411009' style='position: relative'>
-                                    <noscript>
-                                        <a href='#'>
-                                            <img alt='Zip Code Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;ZipCodeDashboard&#47;1_rss.png' style='border: none' />
-                                        </a>
-                                    </noscript>
-                                    <object class='tableauViz'  style='display:none;'>
-                                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                                        <param name='embed_code_version' value='3' />
-                                        <param name='site_root' value='' />
-                                        <param name='name' value='GetFoodDashboardRevised/ZipCodeDashboard' />
-                                        <param name='tabs' value='no' />
-                                        <param name='toolbar' value='yes' />
-                                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;GetFoodDashboardRevised&#47;ZipCodeDashboard&#47;1.png' />
-                                        <param name='animate_transition' value='yes' />
-                                        <param name='display_static_image' value='yes' />
-                                        <param name='display_spinner' value='yes' />
-                                        <param name='display_overlay' value='yes' />
-                                        <param name='display_count' value='yes' />
-                                        <param name='language' value='en-US' />
-                                        <param name='filter' value='publish=yes' />
-                                    </object>
-                                </div>
-                                <script type='text/javascript'>
-                                    var divElement = document.getElementById('viz1635167411009');
-                                    var vizElement = divElement.getElementsByTagName('object')[0];
-                                    if ( divElement.offsetWidth > 800 ) {
-                                        vizElement.style.width='100%';
-                                        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-                                    } else if ( divElement.offsetWidth > 500 ) {
-                                        vizElement.style.width='100%';
-                                        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-                                    } else {
-                                        vizElement.style.width='100%';
-                                        vizElement.style.height='877px';
-                                    }
-                                    var scriptElement = document.createElement('script');
-                                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-                                </script>
-                            </div> -->
                             <h2>GetFoodNYC Meal Distribution</h2>
                             <p>Demand for both kosher and halal food was spread across all five boroughs, with the
                                 highest demand in Brooklyn, Queens, and the Bronx. (all GetFoodNYC data was collected at
@@ -581,32 +539,67 @@
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'],
+            labels: ['Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'],
             datasets: [
                 {
                     label: 'Kosher Percent of Total',
-                    data: [, 0, 4, 11, 14, 16, 18, 16, 15, 14, 13],
+                    data: [0, 4, 12, 14, 16, 17, 19, 17, 15, 13],
                     fill: true,
                     backgroundColor: 'rgb(132,229,162)',
-                    pointBackgroundColor: "rgba(77,77,77,.3)",
+                    hoverBackgroundColor: 'rgba(132,229,162,0.7)',
                     borderWidth: 0,
+                    order: 1,
                 },
                 {
                     label: 'Halal Percent of Total',
-                    data: [, 0, 6, 20, 23, 25, 24, 24, 22, 19, 18],
+                    data: [0, 2, 8, 9, 9, 7, 5, 5, 4, 6],
                     fill: true,
                     backgroundColor: 'rgb(255,219,121)',
-                    pointBackgroundColor: "rgba(77,77,77,.3)",
+                    hoverBackgroundColor: 'rgba(255,219,121,0.7)',
                     borderWidth: 0,
+                    order: 2,
+                },
+                {
+                    label: 'Kosher & Halal Combined Percent of Total',
+                    data: [ 0, 6, 20, 23, 25, 24, 24, 22, 19, 19],
+                    type: 'line',
+                    fill: false,
+                    backgroundColor: 'rgb(233,67,67)',
+                    hoverBackgroundColor: 'rgba(233,67,67,0.7)',
+                    borderColor: 'rgb(233,67,67)',
+                    borderWidth: 2,
+                    order: 0,
+                    yAxisID: 'y1',
+                    pointRadius: 1,
+                    stack: false,
                 },
             ]
         },
         options: {
             responsive: true,
+            interaction: {
+                mode: 'nearest',
+                axis: 'x',
+                intersect: false
+            },
             plugins: {
                 title: {
                     display: true,
                     text: 'Kosher and Halal Percent of Total GetFood NYC Meals'
+                },
+                tooltip: {
+                    enabled: true,
+                    callbacks: {
+                        title: (ttItem) => {
+                            let shortlabels = ['Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+                            let labels = ['March', 'April', 'May', 'June', 'July', 'August.', 'September', 'October.', 'November', 'December'];
+                            return labels[shortlabels.indexOf(ttItem[0].label)];
+                        },
+                        label: function(tooltipItem) {
+                            let returnStr = tooltipItem.dataset.label + ': ' + tooltipItem.formattedValue;
+                            return returnStr + '%';
+                        }
+                    }
                 },
                 legend: {
                     title: {
@@ -628,7 +621,7 @@
                     },
                     ticks: {
                         font: {
-                            size: 7,
+                            size: 10,
                         },
                         autoSkip: false,
                         maxRotation: 0,
@@ -637,6 +630,11 @@
                 },
                 y: {
                     beginAtZero: true,
+                    stacked: true,
+                    suggestedMin: 0,
+                    suggestedMax: 25,
+                    min: 0,
+                    max: 25,
                     scaleLabel: {
                         show: true
                     },
@@ -645,12 +643,15 @@
                     },
                     ticks: {
                         font: {
-                            size: 7,
+                            size: 10,
                         },
                         callback: function (value, index, values) {
                             return value + '%';
                         }
                     }
+                },
+                y1: {
+                    display: false,
                 }
             },
         }
