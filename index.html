@@ -609,7 +609,24 @@
                         text: 'Legend',
                     },
                     position: 'bottom',
-                }
+                },
+                datalabels: {
+                    formatter: (value, dnct1) => {
+                        let sum = 0;
+                        let dataArr = dnct1.chart.data.datasets[0].data;
+                        console.log(dnct1);
+                        let percentage = (value).toFixed(0)+'%';
+                        if(dnct1.datasetIndex !== 2) percentage = '';
+                        if(dnct1.dataIndex === 0) percentage = '';
+                        return percentage;
+                    },
+                    align: (ctx) => {
+                        const positions = [0,45,45,45,90,90,90,120,100,120];
+                        return positions[ctx.dataIndex];
+                    },
+                    offset: 10,
+                    color: '#000'
+                },
             },
             scales: {
                 x: {
@@ -656,7 +673,8 @@
                     display: false,
                 }
             },
-        }
+        },
+        plugins: [ChartDataLabels]
     });
 
     /*const ctx2 = document.getElementById('myChart2').getContext('2d');
