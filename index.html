@@ -748,7 +748,7 @@
             datasets: [
                 {
                     label: 'Total Meals',
-                    data: [ 0.5, 7, 22, 27, 21.7, 13, 7.8, 5.5, 4, 3],
+                    data: [ 172287, 6696225, 22659975, 26914095, 21967611, 12526794, 8231702, 5125707, 3668352, 2996163],
                     backgroundColor: 'rgb(96,220,108)',
                     hoverBackgroundColor: 'rgba(96,220,108,0.7)',
                     borderWidth: 0,
@@ -793,7 +793,6 @@
                         label: function(tooltipItem) {
                             let returnStr = tooltipItem.dataset.label + ': ' + tooltipItem.formattedValue;
                             if(tooltipItem.datasetIndex===1) returnStr += '%';
-                            if(tooltipItem.datasetIndex===0) returnStr += 'M';
                             return returnStr;
                         }
                     }
@@ -867,7 +866,7 @@
                             size: 10,
                         },
                         callback: function (value, index, values) {
-                            return value + 'M';
+                            return value/1000000 + 'M';
                         }
                     }
                 },
