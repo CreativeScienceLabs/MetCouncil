@@ -10,7 +10,7 @@
 	position: relative;
 	@include border-radius(0px 0px 100px 100px);
 	border-top: 20px solid $color-red;
-	padding: 120px 0 140px;
+	padding: 80px 0 100px;
 	@media #{$tablet-landscape} {
 		padding: 80px 0 100px;
 	}
@@ -36,19 +36,19 @@
 		}
 	}
 	h1 {
-		font-size: 160px;
+		font-size: 120px;
 		font-weight: 700;
 		line-height: 0.9;
 		letter-spacing: -0.05em;
 		margin-bottom: 54px;
 		@media only screen and (min-width: 1200px) and (max-width: 1499px){ 
-			font-size: 132px;
+			font-size: 100px;
 		}
 		@media #{$tablet-landscape} {
-			font-size: 112px;
+			font-size: 86px;
 		}
 		@media #{$tablet-portrait} {
-			font-size: 90px;
+			font-size: 70px;
 		}
 		@media #{$mobile-landscape} {
 			font-size: 78px;
@@ -99,33 +99,39 @@
 	}
 }
 .report-block {
-	max-width: 361px;
+	max-width: 244px;
 	width: 100%;
 	background: $color-white;
 	@include border-radius(0px 0px 10px 10px);
 	@media #{$tablet-landscape} {
-		max-width: 300px;
+		max-width: 229px;
 	}
 	@media #{$tablet-portrait} {
-		max-width: 240px;
+		max-width: 229px;
+	}
+	@media #{$mobile-portrait} {
+		min-height: 320px;
 	}
 }
 .top-content {
 	width: 100%;
-	min-height: 460px;
+	min-height: 320px;
 	background-image: url("/dist/images/cover.png");
 	background-size: cover;
 	@media only screen and (min-width: 1200px) and (max-width: 1499px){ 
-		min-height: 470px;
+		min-height: 320px;
 	}
 	@media #{$tablet-landscape} {
-		min-height: 400px;
+		min-height: 300px;
 	}
 	@media #{$tablet-portrait} {
-		min-height: 345px;
+		min-height: 300px;
 	}
 	@media #{$mobile-landscape} {
-		min-height: 445px;
+		min-height: 300px;
+	}
+	@media #{$mobile-portrait} {
+		min-height: 300px;
 	}
 }
 .button-wrap {
