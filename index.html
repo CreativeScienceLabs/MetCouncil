@@ -867,7 +867,7 @@
     const pieChart1 = new Chart(ctx4, {
         type: 'pie',
         data: {
-            labels: ['Combined Kosher and Halal', 'Other Meals'],
+            labels: ['Kosher & Halal', 'Other Meals'],
             datasets: [
                 {
                     label: ['Combined Kosher and Halal', 'Other Meals'],
@@ -876,13 +876,16 @@
                     fill: true,
                     backgroundColor: ['rgb(187,85,17)', 'rgb(44,136,110)'],
                     hoverBackgroundColor: ['rgba(187,85,17,0.7)', 'rgba(44,136,110,0.7)'],
-                    hoverOffset: 4,
+                    hoverOffset: 24,
+                    offset: 20,
                     borderWidth: 0,
                 },
             ],
         },
         options: {
             responsive: true,
+            rotation: 50,
+            radius: "95%",
             plugins: {
                 title: {
                     display: false,
@@ -913,21 +916,30 @@
                 datalabels: {
                     formatter: (value, dnct1) => {
                         let sum = 0;
+                        let label = dnct1.chart.data.labels[dnct1.dataIndex] +'\n' || '';
                         let dataArr = dnct1.chart.data.datasets[0].data;
                         dataArr.map(data => {
                             sum += data;
                         });
                         let percentage = (value*100 / sum).toFixed(0)+'%';
-                        return percentage;
+                        let offset = ['         Meals\n           ','       '];
+                        return label+offset[dnct1.dataIndex]+percentage;
                     },
-                    color: '#000'
+                    align: (ctx) => {
+                        const positions = [-45,0];
+                        return positions[ctx.dataIndex];
+                    },
+                    offset: (ctx) => {
+                        const positions = [-35,-32];
+                        return positions[ctx.dataIndex];
+                    },
+                    font: {
+                        size: 11.5,
+                    },
+                    color: '#fff'
                 },
                 legend: {
-                    title: {
-                        display: false,
-                        text: 'Legend',
-                    },
-                    position: 'bottom',
+                    display: false,
                 },
             },
         },
@@ -952,6 +964,7 @@
         },
         options: {
             responsive: true,
+            radius: "70%",
             plugins: {
                 title: {
                     display: false,
@@ -980,21 +993,18 @@
                 datalabels: {
                     formatter: (value, dnct1) => {
                         let sum = 0;
+                        let label = dnct1.chart.data.labels[dnct1.dataIndex] +'\n' || '';
                         let dataArr = dnct1.chart.data.datasets[0].data;
                         dataArr.map(data => {
                             sum += data;
                         });
-                        let percentage = (value*100 / sum).toFixed(0)+'%';
-                        return percentage;
+                        let percentage = (value/1000000).toFixed(1)+'m';
+                        return label+percentage;
                     },
-                    color: '#000'
+                    color: '#fff'
                 },
                 legend: {
-                    title: {
-                        display: false,
-                        text: 'Legend',
-                    },
-                    position: 'bottom',
+                    display: false,
                 },
             },
         },

@@ -474,12 +474,17 @@
 	width: 100%;
 }
 .piechart1 {
-	max-width: 240px;
-	width: 100%;
+	width: 50%;
+	@media #{$mobile-landscape} {
+		width: 100%;
+	}
 }
 .piechart2 {
-	max-width: 160px;
-	width: 100%;
+	width: 40%;
+	margin-top: 4%;
+	@media #{$mobile-landscape} {
+		width: 100%;
+	}
 }
 .fixed-sidebar {
 	position: relative;
