@@ -237,7 +237,7 @@
                                             viz.dispose();
                                         }
 
-                                        var vizURL = "https://public.tableau.com/views/GetFoodDashboardRevised/"+code;
+                                        var vizURL = "https://public.tableau.com/views/GetFoodDashboardRevised/"+code+"?:toolbar=no";
                                         console.log(vizURL);
                                         viz = new tableau.Viz(vizDiv, vizURL, options);
                                     }
