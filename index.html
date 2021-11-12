@@ -201,7 +201,7 @@
                                         and halal trend at similar rates.</p>
                                 </div>
                                 <div class="content-col">
-                                    <canvas id="myChart" width="400" height="400"></canvas>
+                                    <canvas id="area-chart" width="400" height="300"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -496,17 +496,17 @@
             $('#chartSwitch1').addClass('border');
         });
     });
-    const ctx = document.getElementById('myChart').getContext('2d');
-    const myChart = new Chart(ctx, {
+    const ctx = document.getElementById('area-chart').getContext('2d');
+    const areaChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'],
+            labels: ['Mar-20', 'Apr-20', 'May-20', 'Jun-20', 'Jul-20', 'Aug-20', 'Sep-20', 'Oct-20', 'Nov-20', 'Dec-20'],
             datasets: [
                 {
                     label: 'Kosher Percent of Total',
                     data: [0, 4.2, 11.7, 13.6, 15.6, 16.9, 18.5, 16.6, 14.9, 13.5],
                     fill: true,
-                    backgroundColor: 'rgb(173,43,8)',
+                    backgroundColor: 'rgba(173,43,8,1)',
                     hoverBackgroundColor: 'rgba(173,43,8,0.7)',
                     borderWidth: 0,
                     order: 1,
@@ -516,18 +516,18 @@
                     label: 'Halal Percent of Total',
                     data: [0, 1.8, 8.0, 9.3, 9.0, 7.0, 5.9, 5.5, 4.4, 5.7],
                     fill: true,
-                    backgroundColor: 'rgb(212,146,26)',
+                    backgroundColor: 'rgba(212,146,26,1)',
                     hoverBackgroundColor: 'rgba(212,146,26,0.7)',
                     borderWidth: 0,
                     order: 2,
                     pointRadius: 1,
                 },
                 {
-                    label: 'Kosher & Halal Combined Percent of Total',
+                    label: 'K & H Combined Percent of Total',
                     data: [ 0, 6, 19.7, 22.9, 24.6, 24.0, 24.4, 22.1, 19.3, 19.1],
                     type: 'line',
                     fill: false,
-                    backgroundColor: 'rgb(213,99,22)',
+                    backgroundColor: 'rgba(213,99,22,1)',
                     hoverBackgroundColor: 'rgba(213,99,22,0.7)',
                     borderColor: 'rgb(213,99,22)',
                     borderWidth: 2,
@@ -557,7 +557,7 @@
                     enabled: true,
                     callbacks: {
                         title: (ttItem) => {
-                            let shortlabels = ['Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+                            let shortlabels = ['Mar-20', 'Apr-20', 'May-20', 'Jun-20', 'Jul-20', 'Aug-20', 'Sep-20', 'Oct-20', 'Nov-20', 'Dec-20'];
                             let labels = ['March', 'April', 'May', 'June', 'July', 'August.', 'September', 'October.', 'November', 'December'];
                             return labels[shortlabels.indexOf(ttItem[0].label)];
                         },
@@ -572,7 +572,7 @@
                         display: false,
                         text: 'Legend',
                     },
-                    position: 'bottom',
+                    position: 'top',
                 },
                 datalabels: {
                     formatter: (value, dnct1) => {
@@ -583,10 +583,7 @@
                         if(dnct1.dataIndex === 0) percentage = '';
                         return percentage;
                     },
-                    align: (ctx) => {
-                        const positions = [0,45,45,45,90,90,90,120,100,120];
-                        return positions[ctx.dataIndex];
-                    },
+                    align: 90,
                     offset: 10,
                     color: '#000'
                 },
@@ -595,11 +592,12 @@
                 x: {
                     display: true,
                     title: {
-                        display: true,
+                        display: false,
                         text: '2020'
                     },
                     grid: {
-                        drawTicks: false
+                        drawTicks: false,
+                        drawOnChartArea: true,
                     },
                     ticks: {
                         font: {
@@ -614,14 +612,15 @@
                     beginAtZero: true,
                     stacked: true,
                     suggestedMin: 0,
-                    suggestedMax: 25,
+                    suggestedMax: 30,
                     min: 0,
-                    max: 25,
+                    max: 30,
                     scaleLabel: {
                         show: true
                     },
                     grid: {
-                        drawTicks: false
+                        drawTicks: false,
+                        drawOnChartArea: true, // only want the grid lines for one axis to show up
                     },
                     ticks: {
                         font: {
@@ -634,6 +633,10 @@
                 },
                 y1: {
                     display: false,
+                    suggestedMin: 0,
+                    suggestedMax: 30,
+                    min: 0,
+                    max: 30,
                 }
             },
         },

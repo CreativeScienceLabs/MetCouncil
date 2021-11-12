@@ -473,6 +473,18 @@
 	@include flexbox;
 	width: 100%;
 }
+canvas#bar-line {
+	border: 1px solid #9BAFB5;
+	border-radius: 12px;
+	box-sizing: border-box;
+	padding: 15px;
+}
+canvas#area-chart {
+	border: 1px solid #9BAFB5;
+	border-radius: 12px;
+	box-sizing: border-box;
+	padding: 15px;
+}
 .piechart1 {
 	width: 50%;
 }
