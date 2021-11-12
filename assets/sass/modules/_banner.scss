@@ -40,7 +40,7 @@
 		}
 	}
 	h1 {
-		font-size: 120px;
+		font-size: 90px;
 		font-weight: 700;
 		line-height: 0.9;
 		letter-spacing: -0.05em;
@@ -49,19 +49,19 @@
 			font-size: 80px;
 		}
 		@media #{$tablet-landscape} {
-			font-size: 86px;
+			font-size: 66px;
 		}
 		@media #{$tablet-portrait} {
-			font-size: 70px;
+			font-size: 50px;
 		}
 		@media #{$mobile-landscape} {
-			font-size: 78px;
-			letter-spacing: -7px;
+			font-size: 40px;
+			letter-spacing: 0px;
 			margin-bottom: 30px;
 		}
 		@media #{$mobile-portrait} {
-			font-size: 60px;
-			letter-spacing: -5px;
+			font-size: 40px;
+			letter-spacing: -3px;
 		}
 	}
 	.report-block {
@@ -95,7 +95,7 @@
 		line-height: 1.58;
 		@media #{$mobile-landscape} {
 			padding-left: 20px;
-			font-size: 20px;
+			font-size: 16px;
 		}
 	}
 	img {
