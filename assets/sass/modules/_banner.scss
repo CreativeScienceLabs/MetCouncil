@@ -39,6 +39,11 @@
 			@include border-radius(0px 0px 50px 50px);
 		}
 	}
+	.center-col {
+		@media #{$mobile-landscape} {
+			display: block;
+		}
+	}
 	h1 {
 		font-size: 90px;
 		font-weight: 700;
