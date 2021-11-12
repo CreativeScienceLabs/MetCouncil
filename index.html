@@ -184,7 +184,7 @@
                             </div>
                             <div class="content-inner">
                                 <div class="content-col">
-                                    <canvas id="bar-line" width="400" height="400"></canvas>
+                                    <canvas id="bar-line" width="400" height="300"></canvas>
                                 </div>
                                 <div class="content-col center-col">
                                     <p>In the early months of the pandemic, from March 2020 through December 2020,
@@ -737,7 +737,7 @@
                     hoverBackgroundColor: 'rgba(55,171,152,0.7)',
                     borderWidth: 0,
                     order: 2,
-                    barThickness: 25,
+                    barThickness: 15,
                     yAxisID: 'y1',
                 },
                 {
@@ -748,7 +748,7 @@
                     backgroundColor: 'rgb(213,99,24)',
                     hoverBackgroundColor: 'rgba(213,99,24,0.7)',
                     borderColor: 'rgb(213,99,24)',
-                    borderWidth: 2,
+                    borderWidth: 3,
                     order: 1,
                     yAxisID: 'y',
                     pointRadius: 1,
@@ -791,7 +791,20 @@
                         text: 'Legend',
                     },
                     position: 'bottom',
-                }
+                },
+                datalabels: {
+                    formatter: (value, dnct1) => {
+                        let sum = 0;
+                        let dataArr = dnct1.chart.data.datasets[0].data;
+                        let percentage = (value).toFixed(0)+'%';
+                        if(dnct1.datasetIndex !== 1) percentage = '';
+                        if(dnct1.dataIndex === 0) percentage = '';
+                        return percentage;
+                    },
+                    align: 90,
+                    offset: 5,
+                    color: 'rgb(213,99,24)'
+                },
             },
             scales: {
                 x: {
@@ -866,7 +879,8 @@
                     }
                 },
             },
-        }
+        },
+        plugins: [ChartDataLabels]
     });
 
 
