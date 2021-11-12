@@ -25,8 +25,7 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
-		background: url(../images/bg-image1.png) repeat left top;
-		mix-blend-mode: multiply;
+		background: url(../images/bg-image-ft.jpg) repeat left top;
 		@include border-radius(100px 100px 0px 0px);
 		@media #{$mobile-landscape} {
 			@include border-radius(50px 50px 0px 0px);
@@ -39,7 +38,7 @@
 .footer-bottom {
 	width: 100%;
 	text-align: center;
-	background: $color-red;
+	background: $color-gray;
 	padding: 33px 0;
 	@media #{$tablet-portrait} {
 		padding: 24px 0;
