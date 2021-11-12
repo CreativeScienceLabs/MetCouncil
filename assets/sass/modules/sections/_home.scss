@@ -475,16 +475,10 @@
 }
 .piechart1 {
 	width: 50%;
-	@media #{$mobile-landscape} {
-		width: 100%;
-	}
 }
 .piechart2 {
 	width: 40%;
 	margin-top: 4%;
-	@media #{$mobile-landscape} {
-		width: 100%;
-	}
 }
 .fixed-sidebar {
 	position: relative;
