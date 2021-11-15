@@ -82,8 +82,8 @@
 			margin-bottom: 20px;
 		}
 		p {
-			font-size: $size-base;
-			line-height: 1.18;
+			/*font-size: $size-base;
+			line-height: 1.18;*/
 		}
 	}
 	&.breakdown {
@@ -179,10 +179,30 @@
 	&:first-of-type {
 		margin-top: 0;
 	}
+	&.recommendation {
+		align-items: center;
+		margin-bottom: 15px;
+		@media #{$tablet-portrait} {
+			margin-bottom: 0;
+		}
+	}
 }
 .content-col {
 	width: 50%;
 	padding: 0 0 0 14px;
+	&.col-45 {
+		width: 45%;
+		@media #{$tablet-portrait} {
+			width: 100%;
+			margin-bottom: 15px;
+		}
+	}
+	&.col-55 {
+		width: 55%;
+		@media #{$tablet-portrait} {
+			width: 100%;
+		}
+	}
 	@media #{$tablet-portrait} {
 		width: 100%;
 		padding: 14px 0 0;
@@ -496,4 +516,7 @@ canvas#area-chart {
 .fixed-sidebar {
 	position: relative;
 	width: 100%;
+}
+p strong{
+	color:#33a995;
 }
