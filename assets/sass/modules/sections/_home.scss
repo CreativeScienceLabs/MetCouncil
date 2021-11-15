@@ -456,6 +456,10 @@
       @include flex-direction(column);
       padding: 0;
     }
+	@media #{$mobile-landscape} {
+		@include flex-direction(column);
+		padding: 0;
+	}
     
     li{
         list-style: none;
@@ -472,6 +476,10 @@
 			width: 100%;
 			padding: 32px;
         }
+		@media #{$mobile-landscape} {
+			width: 100%;
+			padding: 32px;
+		}
 
         img{
 			margin: 0 0 20px;
