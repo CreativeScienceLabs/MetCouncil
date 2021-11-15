@@ -461,9 +461,6 @@
         list-style: none;
         width: 33%;
         padding: 32px;
-		border: #9BAFB5 solid 1px;
-		border-radius: 10px;
-		margin: 15px;
         
         @media #{$desktop-xl} {
 			padding: 32px;
@@ -477,7 +474,7 @@
         }
 
         img{
-			margin: auto auto 20px auto;
+			margin: 0 0 20px;
 			display: block;
 			/*@media #{$tablet-portrait} {
                 width: 40px;
