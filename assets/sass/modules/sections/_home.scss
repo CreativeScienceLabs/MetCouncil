@@ -525,3 +525,10 @@ canvas#area-chart {
 p strong{
 	color:#33a995;
 }
+
+#block1 .content-inner {
+	margin-top: 30px;
+	@media #{$tablet-landscape} {
+		margin-top: 20px;
+	}
+}
