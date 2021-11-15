@@ -1,8 +1,8 @@
 <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="7.8125" y="8.54639" width="34.375" height="39.0625" stroke="#D56418" stroke-width="3"/>
-<rect x="15.625" y="3.85889" width="18.75" height="10.9375" stroke="#D56418" stroke-width="3"/>
-<path d="M17.1875 21.0464H32.8125" stroke="#D56418" stroke-width="3" stroke-linecap="round"/>
-<path d="M17.1875 27.2964H32.8125" stroke="#D56418" stroke-width="3" stroke-linecap="round"/>
-<path d="M17.1875 33.5464H32.8125" stroke="#D56418" stroke-width="3" stroke-linecap="round"/>
-<path d="M17.1875 39.7964H25" stroke="#D56418" stroke-width="3" stroke-linecap="round"/>
+<rect x="7.8125" y="8.54639" width="34.375" height="39.0625" stroke="#34AA96" stroke-width="3"/>
+<rect x="15.625" y="3.85889" width="18.75" height="10.9375" stroke="#34AA96" stroke-width="3"/>
+<path d="M17.1875 21.0464H32.8125" stroke="#34AA96" stroke-width="3" stroke-linecap="round"/>
+<path d="M17.1875 27.2964H32.8125" stroke="#34AA96" stroke-width="3" stroke-linecap="round"/>
+<path d="M17.1875 33.5464H32.8125" stroke="#34AA96" stroke-width="3" stroke-linecap="round"/>
+<path d="M17.1875 39.7964H25" stroke="#34AA96" stroke-width="3" stroke-linecap="round"/>
 </svg>

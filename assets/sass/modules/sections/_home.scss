@@ -440,30 +440,34 @@
     li{
         list-style: none;
         width: 33%;
-        padding: 0 50px 0 0;
+        padding: 32px;
+		border: #9BAFB5 solid 1px;
+		border-radius: 10px;
+		margin: 15px;
         
         @media #{$desktop-xl} {
-            padding: 0 35px  0 0;
+			padding: 32px;
         }
         @media #{$tablet-landscape} {
-            padding: 0 25px 0 0;
+			padding: 25px;
         }
         @media #{$tablet-portrait} {
-            padding: 0 10px  0 0;
+			padding: 10px;
         }
         @media #{$mobile-landscape} {
             width: 100%;
-            padding: 0;
+			padding: 32px;
         }
 
         img{
-            margin: 0 0 10px;
-            @media #{$tablet-portrait} {
+			margin: auto auto 20px auto;
+			display: block;
+			/*@media #{$tablet-portrait} {
                 width: 40px;
             }
             @media #{$mobile-landscape} {
                margin: 0;
-            }
+            }*/
         }
     }
     
