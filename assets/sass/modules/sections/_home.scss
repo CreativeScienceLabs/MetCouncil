@@ -432,7 +432,7 @@
     @include flexbox;
     padding: 36px 0 0;   
        
-    @media #{$mobile-landscape} {
+    @media #{$tablet-portrait} {
       @include flex-direction(column);
       padding: 0;
     }
@@ -452,10 +452,7 @@
 			padding: 25px;
         }
         @media #{$tablet-portrait} {
-			padding: 10px;
-        }
-        @media #{$mobile-landscape} {
-            width: 100%;
+			width: 100%;
 			padding: 32px;
         }
 
