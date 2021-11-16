@@ -501,24 +501,21 @@
 	@include flexbox;
 	width: 100%;
 }
-.pie-chart-block {
+.chart-block-wrapper {
 	border: 1px solid #9BAFB5;
 	border-radius: 12px;
 	box-sizing: border-box;
 	padding: 15px;
 	width: 100%;
-}
-canvas#bar-line {
-	border: 1px solid #9BAFB5;
-	border-radius: 12px;
-	box-sizing: border-box;
-	padding: 15px;
-}
-canvas#area-chart {
-	border: 1px solid #9BAFB5;
-	border-radius: 12px;
-	box-sizing: border-box;
-	padding: 15px;
+
+	.chart-legend {
+		font-size: 14px;
+		text-align: center;
+		padding-bottom: 5px;
+		font-family: $gotham-bld;
+		color: #656665;
+		letter-spacing: -0.2px;
+	}
 }
 .piechart1 {
 	width: 50%;
@@ -543,4 +540,5 @@ p strong{
 }
 p i {
 	font-style: italic;
+	color:#33a995;
 }

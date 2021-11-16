@@ -17,14 +17,6 @@
             background: #60dc6d;
         }
 
-        .chart-legend {
-            font-size: 12px;
-            text-align: center;
-            padding-bottom: 5px;
-            font-family: 'Gotham Bold';
-            color: #656665;
-            letter-spacing: -0.2px;
-        }
 
         /*.tableauPlaceholder {
             display: none !important;
@@ -179,7 +171,7 @@
                                 </div>
                                 <div class="content-col center-col">
                                     <!-- <img src="dist/images/graph1.png" alt=""> -->
-                                    <div class="pie-chart-block">
+                                    <div class="chart-block-wrapper">
                                         <div class="chart-legend">
                                             GetFoodNYC Total Meals March 2020 - September 2021
                                         </div>
@@ -196,7 +188,12 @@
                             </div>
                             <div class="content-inner">
                                 <div class="content-col center-col">
-                                    <canvas id="bar-line" width="400" height="300"></canvas>
+                                    <div class="chart-block-wrapper">
+                                        <div class="chart-legend">
+                                            GetFoodNYC 2020 Meals by Month
+                                        </div>
+                                        <canvas id="bar-line" width="400" height="300"></canvas>
+                                    </div>
                                 </div>
                                 <div class="content-col center-col">
                                     <p>Looking at the early months of the pandemic, from March 2020 through December
@@ -220,7 +217,12 @@
                                         2020.</p>
                                 </div>
                                 <div class="content-col center-col">
-                                    <canvas id="area-chart" width="400" height="300"></canvas>
+                                    <div class="chart-block-wrapper">
+                                        <div class="chart-legend">
+                                            Kosher and Halal Percent of Total GetFoodNYC Meals
+                                        </div>
+                                        <canvas id="area-chart" width="400" height="300"></canvas>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -494,8 +496,7 @@
                     <div class="col-12">
                         <p><img src="dist/images/image2.svg" alt=""> <strong>Getting Food to All Hungry New
                             Yorkers:</strong>
-                            An Analysis of Kosher and Halal Meals Distributed Emergency Food Through
-                            <strong>GetFoodNYC</strong>
+                            An Analysis of Kosher and Halal Meals Distributed Through GetFoodNYC
                             \ 2021</p>
                     </div>
                 </div>
@@ -536,7 +537,7 @@
     const areaChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['Mar-20', 'Apr-20', 'May-20', 'Jun-20', 'Jul-20', 'Aug-20', 'Sep-20', 'Oct-20', 'Nov-20', 'Dec-20'],
+            labels: ['Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
             datasets: [
                 {
                     label: 'Kosher Percent of Total',
@@ -583,7 +584,7 @@
             },
             plugins: {
                 title: {
-                    display: true,
+                    display: false,
                     text: 'Kosher and Halal Percent of Total GetFood NYC Meals',
                     font: {
                         size: 12,
@@ -593,7 +594,7 @@
                     enabled: true,
                     callbacks: {
                         title: (ttItem) => {
-                            let shortlabels = ['Mar-20', 'Apr-20', 'May-20', 'Jun-20', 'Jul-20', 'Aug-20', 'Sep-20', 'Oct-20', 'Nov-20', 'Dec-20'];
+                            let shortlabels = ['Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
                             let labels = ['March', 'April', 'May', 'June', 'July', 'August.', 'September', 'October.', 'November', 'December'];
                             return labels[shortlabels.indexOf(ttItem[0].label)];
                         },
@@ -637,7 +638,7 @@
                     },
                     ticks: {
                         font: {
-                            size: 11,
+                            size: 12,
                         },
                         autoSkip: false,
                         maxRotation: 0,
@@ -768,7 +769,7 @@
     const barLine = new Chart(ctx3, {
         type: 'bar',
         data: {
-            labels: ['Mar-20', 'Apr-20', 'May-20', 'Jun-20', 'Jul-20', 'Aug-20', 'Sep-20', 'Oct-20', 'Nov-20', 'Dec-20'],
+            labels: ['Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
             datasets: [
                 {
                     label: 'Total Meals',
@@ -804,7 +805,7 @@
             stacked: false,
             plugins: {
                 title: {
-                    display: true,
+                    display: false,
                     text: 'GetFoodNYC 2020 Meals by Month',
                     font: {
                         size: 14,
@@ -814,7 +815,7 @@
                     enabled: true,
                     callbacks: {
                         title: (ttItem) => {
-                            let shortlabels = ['Mar-20', 'Apr-20', 'May-20', 'Jun-20', 'Jul-20', 'Aug-20', 'Sep-20', 'Oct-20', 'Nov-20', 'Dec-20'];
+                            let shortlabels = ['Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
                             let labels = ['March', 'April', 'May', 'June', 'July', 'August.', 'September', 'October.', 'November', 'December'];
                             return labels[shortlabels.indexOf(ttItem[0].label)];
                         },
@@ -859,7 +860,7 @@
                     },
                     ticks: {
                         font: {
-                            size: 9,
+                            size: 11,
                         },
                         autoSkip: false,
                         maxRotation: 0,
