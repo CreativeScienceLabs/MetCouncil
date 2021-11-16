@@ -50,7 +50,7 @@
 .content-row {
 	width: 100%;
 	display: block;
-	margin-top: 104px;
+	margin-top: 50px;
 	&:first-of-type {
 		margin-top: 0;
 	}
@@ -61,12 +61,12 @@
 		margin-top: 30px;
 	}
 	h2 {
-		margin-bottom: 64px;
+		margin-bottom: 20px;
 		@media #{$tablet-portrait} {
-			margin-bottom: 40px;
+			margin-bottom: 15px;
 		}
 		@media #{$mobile-landscape} {
-		    margin-bottom: 20px;
+		    margin-bottom: 15px;
 		    word-wrap: break-word;
 		}
 	}
@@ -91,17 +91,6 @@
 			margin-bottom: 20px;
 			@media #{$mobile-landscape} {
 				margin-bottom: 15px;
-			}
-		}
-		.content-inner {
-			&:first-of-type {
-				margin-top: 55px;
-				@media #{$tablet-portrait} {
-					margin-top: 30px;
-				}
-				@media #{$mobile-landscape} {
-					margin-top: 20px;
-				}
 			}
 		}
 	}

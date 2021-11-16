@@ -120,10 +120,13 @@
 	}
 }
 .report-block {
-	max-width: 244px;
+	max-width: 360px;
 	width: 100%;
 	background: $color-white;
-	@include border-radius(0px 0px 10px 10px);
+    overflow: hidden;
+    padding: 20px;
+
+	@include border-radius(10px);
 	@media #{$tablet-landscape} {
 		max-width: 229px;
 	}
