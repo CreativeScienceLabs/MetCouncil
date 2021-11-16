@@ -28,6 +28,11 @@
 	.row {
 		display: flex;
 		align-items: center;
+
+		@media #{$mobile-landscape} {
+			flex-direction: column;
+			justify-content: center;
+		}
 	}
 	&:before {
 		position: absolute;
