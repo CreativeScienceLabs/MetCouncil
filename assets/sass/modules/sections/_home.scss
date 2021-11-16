@@ -500,6 +500,7 @@
 .chart-block {
 	@include flexbox;
 	width: 100%;
+	justify-content: center;
 }
 .chart-block-wrapper {
 	border: 1px solid #9BAFB5;
