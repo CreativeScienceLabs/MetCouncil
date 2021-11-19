@@ -134,10 +134,10 @@
 
 	@include border-radius(10px);
 	@media #{$tablet-landscape} {
-		max-width: 229px;
+		max-width: 267px;
 	}
 	@media #{$tablet-portrait} {
-		max-width: 229px;
+		max-width: 267px;
 	}
 	@media #{$mobile-portrait} {
 		min-height: 320px;
@@ -149,19 +149,19 @@
 	background-image: url("/dist/images/cover.jpg");
 	background-size: cover;
 	@media only screen and (min-width: 1200px) and (max-width: 1499px){ 
-		min-height: 320px;
+		min-height: 420px;
 	}
 	@media #{$tablet-landscape} {
-		min-height: 300px;
+		min-height: 298px;
 	}
 	@media #{$tablet-portrait} {
-		min-height: 300px;
+		min-height: 259px;
 	}
 	@media #{$mobile-landscape} {
-		min-height: 300px;
+		min-height: 420px;
 	}
 	@media #{$mobile-portrait} {
-		min-height: 300px;
+		min-height: 420px;
 	}
 }
 .button-wrap {
@@ -175,19 +175,25 @@
 	background: $color-yellow;
 	text-align: center;
 	position: relative;
-	height: 60px;
-	line-height: 60px;
+	height: auto;
+	line-height: 1.2;
 	color: $color-black;
 	text-transform: uppercase;
 	font-family: $gotham-bld;
 	font-size: 15px;
+	padding: 18px 40px 18px 10px;
+	@media #{$tablet-landscape} {
+		font-size: 13px;
+	}
 	@media #{$tablet-portrait} {
-		font-size: $size-base;
+		font-size: 13px;
 	}
 	&:after {
-		display: inline-block;
+		display: block;
 		vertical-align: middle;
-		position: relative;
+		position: absolute;
+		right: 10px;
+		top: calc( 50% - 13px);
 		content: "";
 		width: 23px;
 		height: 23px;
