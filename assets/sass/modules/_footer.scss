@@ -31,8 +31,13 @@
 			@include border-radius(50px 50px 0px 0px);
 		}
 	}
+	.banner-logo {
+		max-width: 300px;
+		margin: 0 auto;
+	}
 	.report-block {
 		margin: 0 auto;
+		max-width: 300px;
 	}
 }
 .footer-bottom {
